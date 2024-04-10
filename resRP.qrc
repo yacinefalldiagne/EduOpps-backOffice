@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>Images/barre-de-menu.png</file>
+    </qresource>
+</RCC>

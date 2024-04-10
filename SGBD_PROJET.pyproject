@@ -1,0 +1,12 @@
+{
+    "files": [
+        "Cahier_de_texte.ui",
+        "accueil.py",
+        "accueil_RP.ui",
+        "mainwindow.ui",
+        "res.qrc",
+        "resRP.qrc",
+        "ressources.qrc",
+        "testImg.qrc"
+    ]
+}

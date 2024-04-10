@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>loco pers.jpeg</file>
+        <file>mdp.png</file>
+        <file>logo esp.jpeg</file>
+    </qresource>
+</RCC>
