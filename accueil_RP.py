@@ -15,16 +15,16 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QGroupBox,
-    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
-    QPushButton, QSizePolicy, QSpacerItem, QStackedWidget,
-    QTableWidget, QTableWidgetItem, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QGridLayout, QGroupBox, QHBoxLayout,
+    QHeaderView, QLabel, QLineEdit, QPushButton,
+    QSizePolicy, QSpacerItem, QStackedWidget, QTableWidget,
+    QTableWidgetItem, QTextEdit, QVBoxLayout, QWidget)
 
 class Ui_Form(object):
     def setupUi(self, Form):
         if not Form.objectName():
             Form.setObjectName(u"Form")
-        Form.resize(847, 663)
+        Form.resize(863, 663)
         Form.setStyleSheet(u"background-color: rgb(255, 255, 255);")
         self.icon_only_widget = QWidget(Form)
         self.icon_only_widget.setObjectName(u"icon_only_widget")
@@ -386,7 +386,7 @@ class Ui_Form(object):
         self.Accueil.setObjectName(u"Accueil")
         self.label_4 = QLabel(self.Accueil)
         self.label_4.setObjectName(u"label_4")
-        self.label_4.setGeometry(QRect(190, 160, 111, 41))
+        self.label_4.setGeometry(QRect(50, 100, 541, 41))
         font = QFont()
         font.setFamilies([u"MS Gothic"])
         font.setPointSize(20)
@@ -398,7 +398,7 @@ class Ui_Form(object):
         self.Cahierdetexte.setObjectName(u"Cahierdetexte")
         self.groupBox_2 = QGroupBox(self.Cahierdetexte)
         self.groupBox_2.setObjectName(u"groupBox_2")
-        self.groupBox_2.setGeometry(QRect(30, 100, 581, 321))
+        self.groupBox_2.setGeometry(QRect(10, 150, 581, 321))
         self.groupBox_2.setStyleSheet(u"background-color: rgb(255, 255, 255);")
         self.gridLayout = QGridLayout(self.groupBox_2)
         self.gridLayout.setObjectName(u"gridLayout")
@@ -424,52 +424,110 @@ class Ui_Form(object):
 
         self.widget = QWidget(self.Cahierdetexte)
         self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(30, 20, 551, 80))
-        self.line = QFrame(self.widget)
-        self.line.setObjectName(u"line")
-        self.line.setGeometry(QRect(260, 0, 20, 81))
-        self.line.setFrameShape(QFrame.VLine)
-        self.line.setFrameShadow(QFrame.Sunken)
-        self.label_6 = QLabel(self.widget)
-        self.label_6.setObjectName(u"label_6")
-        self.label_6.setGeometry(QRect(20, 0, 201, 20))
-        self.label_13 = QLabel(self.widget)
-        self.label_13.setObjectName(u"label_13")
-        self.label_13.setGeometry(QRect(280, 0, 221, 16))
+        self.widget.setGeometry(QRect(10, 10, 581, 131))
+        self.btn_cahier = QPushButton(self.widget)
+        self.btn_cahier.setObjectName(u"btn_cahier")
+        self.btn_cahier.setGeometry(QRect(0, 100, 581, 31))
+        self.btn_cahier.setStyleSheet(u"QPushButton {\n"
+"    background-color: #333333; \n"
+"    color: #FFFFFF; \n"
+"    border: 2px solid #333333; /* Bordure */\n"
+"    border-radius: 10px; \n"
+"    padding: 8px 16px;\n"
+"    font-size: 14px; \n"
+"}\n"
+"\n"
+"/* Changement de style au survol */\n"
+"QPushButton:hover {\n"
+"    background-color: #555555;\n"
+"    border-color: #555555; \n"
+"}\n"
+"\n"
+"/* Changement de style lorsqu'on clique */\n"
+"QPushButton:pressed {\n"
+"    background-color: #222222; /* Couleur de fond lors du clic */\n"
+"    border-color: #222222; /* Bordure lors du clic */\n"
+"    color: #CCCCCC; /* Couleur du texte lors du clic */\n"
+"}\n"
+"")
         self.widget1 = QWidget(self.widget)
         self.widget1.setObjectName(u"widget1")
-        self.widget1.setGeometry(QRect(20, 30, 216, 26))
-        self.horizontalLayout_6 = QHBoxLayout(self.widget1)
+        self.widget1.setGeometry(QRect(0, 10, 571, 81))
+        self.verticalLayout_9 = QVBoxLayout(self.widget1)
+        self.verticalLayout_9.setObjectName(u"verticalLayout_9")
+        self.verticalLayout_9.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_7 = QHBoxLayout()
+        self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
+        self.label_13 = QLabel(self.widget1)
+        self.label_13.setObjectName(u"label_13")
+
+        self.horizontalLayout_7.addWidget(self.label_13)
+
+        self.lineEdit_3 = QLineEdit(self.widget1)
+        self.lineEdit_3.setObjectName(u"lineEdit_3")
+        self.lineEdit_3.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
+"QLineEdit {\n"
+"    background-color: transparent; /* Fond transparent */\n"
+"    border: none; /* Pas de bordure par d\u00e9faut */\n"
+"    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */\n"
+"    padding: 2px; /* Espacement du texte \u00e0 l'int\u00e9rieur */\n"
+"    font-size: 16px; /* Taille de la police */\n"
+"    color: #333333; /* Couleur du texte */\n"
+"}\n"
+"\n"
+"/* Changement de style au survol */\n"
+"QLineEdit:hover {\n"
+"    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */\n"
+"}\n"
+"\n"
+"/* Changement de style lorsqu'il est actif/focus */\n"
+"QLineEdit:focus {\n"
+"    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */\n"
+"}\n"
+"")
+
+        self.horizontalLayout_7.addWidget(self.lineEdit_3)
+
+
+        self.verticalLayout_9.addLayout(self.horizontalLayout_7)
+
+        self.horizontalLayout_6 = QHBoxLayout()
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
-        self.horizontalLayout_6.setContentsMargins(0, 0, 0, 0)
+        self.label_6 = QLabel(self.widget1)
+        self.label_6.setObjectName(u"label_6")
+
+        self.horizontalLayout_6.addWidget(self.label_6)
+
         self.lineEdit_2 = QLineEdit(self.widget1)
         self.lineEdit_2.setObjectName(u"lineEdit_2")
         self.lineEdit_2.setMaximumSize(QSize(16777215, 16777215))
         self.lineEdit_2.setBaseSize(QSize(0, 0))
-        self.lineEdit_2.setReadOnly(True)
+        self.lineEdit_2.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
+"QLineEdit {\n"
+"    background-color: transparent; /* Fond transparent */\n"
+"    border: none; /* Pas de bordure par d\u00e9faut */\n"
+"    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */\n"
+"    padding: 2px; /* Espacement du texte \u00e0 l'int\u00e9rieur */\n"
+"    font-size: 16px; /* Taille de la police */\n"
+"    color: #333333; /* Couleur du texte */\n"
+"}\n"
+"\n"
+"/* Changement de style au survol */\n"
+"QLineEdit:hover {\n"
+"    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */\n"
+"}\n"
+"\n"
+"/* Changement de style lorsqu'il est actif/focus */\n"
+"QLineEdit:focus {\n"
+"    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */\n"
+"}\n"
+"")
+        self.lineEdit_2.setReadOnly(False)
 
         self.horizontalLayout_6.addWidget(self.lineEdit_2)
 
-        self.pushButton = QPushButton(self.widget1)
-        self.pushButton.setObjectName(u"pushButton")
 
-        self.horizontalLayout_6.addWidget(self.pushButton)
-
-        self.widget2 = QWidget(self.widget)
-        self.widget2.setObjectName(u"widget2")
-        self.widget2.setGeometry(QRect(280, 30, 216, 26))
-        self.horizontalLayout_7 = QHBoxLayout(self.widget2)
-        self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
-        self.horizontalLayout_7.setContentsMargins(0, 0, 0, 0)
-        self.lineEdit_3 = QLineEdit(self.widget2)
-        self.lineEdit_3.setObjectName(u"lineEdit_3")
-
-        self.horizontalLayout_7.addWidget(self.lineEdit_3)
-
-        self.pushButton_2 = QPushButton(self.widget2)
-        self.pushButton_2.setObjectName(u"pushButton_2")
-
-        self.horizontalLayout_7.addWidget(self.pushButton_2)
+        self.verticalLayout_9.addLayout(self.horizontalLayout_6)
 
         self.stackedWidget.addWidget(self.Cahierdetexte)
         self.Effectivite = QWidget()
@@ -481,10 +539,140 @@ class Ui_Form(object):
         self.stackedWidget.addWidget(self.Effectivite)
         self.Conformite = QWidget()
         self.Conformite.setObjectName(u"Conformite")
-        self.label_7 = QLabel(self.Conformite)
-        self.label_7.setObjectName(u"label_7")
-        self.label_7.setGeometry(QRect(90, 110, 251, 41))
-        self.label_7.setFont(font)
+        self.groupBox_6 = QGroupBox(self.Conformite)
+        self.groupBox_6.setObjectName(u"groupBox_6")
+        self.groupBox_6.setGeometry(QRect(10, 150, 581, 321))
+        self.groupBox_6.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.gridLayout_6 = QGridLayout(self.groupBox_6)
+        self.gridLayout_6.setObjectName(u"gridLayout_6")
+        self.tableWidget_6 = QTableWidget(self.groupBox_6)
+        if (self.tableWidget_6.columnCount() < 4):
+            self.tableWidget_6.setColumnCount(4)
+        __qtablewidgetitem4 = QTableWidgetItem()
+        self.tableWidget_6.setHorizontalHeaderItem(0, __qtablewidgetitem4)
+        __qtablewidgetitem5 = QTableWidgetItem()
+        self.tableWidget_6.setHorizontalHeaderItem(1, __qtablewidgetitem5)
+        __qtablewidgetitem6 = QTableWidgetItem()
+        self.tableWidget_6.setHorizontalHeaderItem(2, __qtablewidgetitem6)
+        __qtablewidgetitem7 = QTableWidgetItem()
+        self.tableWidget_6.setHorizontalHeaderItem(3, __qtablewidgetitem7)
+        self.tableWidget_6.setObjectName(u"tableWidget_6")
+        self.tableWidget_6.setStyleSheet(u"border: 1px solid #c6c6c6;\n"
+"border-radius: 5px;")
+        self.tableWidget_6.horizontalHeader().setCascadingSectionResizes(False)
+        self.tableWidget_6.horizontalHeader().setDefaultSectionSize(132)
+        self.tableWidget_6.horizontalHeader().setStretchLastSection(True)
+
+        self.gridLayout_6.addWidget(self.tableWidget_6, 0, 0, 1, 1)
+
+        self.widget_5 = QWidget(self.Conformite)
+        self.widget_5.setObjectName(u"widget_5")
+        self.widget_5.setGeometry(QRect(10, 10, 581, 121))
+        self.btn_conformite = QPushButton(self.widget_5)
+        self.btn_conformite.setObjectName(u"btn_conformite")
+        self.btn_conformite.setGeometry(QRect(10, 80, 561, 39))
+        self.btn_conformite.setStyleSheet(u"QPushButton {\n"
+"    background-color: #333333; \n"
+"    color: #FFFFFF; \n"
+"    border: 2px solid #333333; /* Bordure */\n"
+"    border-radius: 10px; \n"
+"    padding: 8px 16px;\n"
+"    font-size: 14px; \n"
+"}\n"
+"\n"
+"/* Changement de style au survol */\n"
+"QPushButton:hover {\n"
+"    background-color: #555555;\n"
+"    border-color: #555555; \n"
+"}\n"
+"\n"
+"/* Changement de style lorsqu'on clique */\n"
+"QPushButton:pressed {\n"
+"    background-color: #222222; /* Couleur de fond lors du clic */\n"
+"    border-color: #222222; /* Bordure lors du clic */\n"
+"    color: #CCCCCC; /* Couleur du texte lors du clic */\n"
+"}\n"
+"")
+        self.widget2 = QWidget(self.widget_5)
+        self.widget2.setObjectName(u"widget2")
+        self.widget2.setGeometry(QRect(10, 10, 571, 68))
+        self.verticalLayout_10 = QVBoxLayout(self.widget2)
+        self.verticalLayout_10.setObjectName(u"verticalLayout_10")
+        self.verticalLayout_10.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_16 = QHBoxLayout()
+        self.horizontalLayout_16.setObjectName(u"horizontalLayout_16")
+        self.label_27 = QLabel(self.widget2)
+        self.label_27.setObjectName(u"label_27")
+
+        self.horizontalLayout_16.addWidget(self.label_27)
+
+        self.lineEdit_12 = QLineEdit(self.widget2)
+        self.lineEdit_12.setObjectName(u"lineEdit_12")
+        self.lineEdit_12.setMaximumSize(QSize(16777215, 16777215))
+        self.lineEdit_12.setBaseSize(QSize(0, 0))
+        self.lineEdit_12.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
+"QLineEdit {\n"
+"    background-color: transparent; /* Fond transparent */\n"
+"    border: none; /* Pas de bordure par d\u00e9faut */\n"
+"    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */\n"
+"    padding: 2px; /* Espacement du texte \u00e0 l'int\u00e9rieur */\n"
+"    font-size: 16px; /* Taille de la police */\n"
+"    color: #333333; /* Couleur du texte */\n"
+"}\n"
+"\n"
+"/* Changement de style au survol */\n"
+"QLineEdit:hover {\n"
+"    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */\n"
+"}\n"
+"\n"
+"/* Changement de style lorsqu'il est actif/focus */\n"
+"QLineEdit:focus {\n"
+"    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */\n"
+"}\n"
+"\n"
+"")
+        self.lineEdit_12.setReadOnly(False)
+
+        self.horizontalLayout_16.addWidget(self.lineEdit_12)
+
+
+        self.verticalLayout_10.addLayout(self.horizontalLayout_16)
+
+        self.horizontalLayout_24 = QHBoxLayout()
+        self.horizontalLayout_24.setObjectName(u"horizontalLayout_24")
+        self.label_28 = QLabel(self.widget2)
+        self.label_28.setObjectName(u"label_28")
+
+        self.horizontalLayout_24.addWidget(self.label_28)
+
+        self.lineEdit_13 = QLineEdit(self.widget2)
+        self.lineEdit_13.setObjectName(u"lineEdit_13")
+        self.lineEdit_13.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
+"QLineEdit {\n"
+"    background-color: transparent; /* Fond transparent */\n"
+"    border: none; /* Pas de bordure par d\u00e9faut */\n"
+"    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */\n"
+"    padding: 2px; /* Espacement du texte \u00e0 l'int\u00e9rieur */\n"
+"    font-size: 16px; /* Taille de la police */\n"
+"    color: #333333; /* Couleur du texte */\n"
+"}\n"
+"\n"
+"/* Changement de style au survol */\n"
+"QLineEdit:hover {\n"
+"    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */\n"
+"}\n"
+"\n"
+"/* Changement de style lorsqu'il est actif/focus */\n"
+"QLineEdit:focus {\n"
+"    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */\n"
+"}\n"
+"")
+
+        self.horizontalLayout_24.addWidget(self.lineEdit_13)
+
+
+        self.verticalLayout_10.addLayout(self.horizontalLayout_24)
+
         self.stackedWidget.addWidget(self.Conformite)
         self.Deroulementprogramme = QWidget()
         self.Deroulementprogramme.setObjectName(u"Deroulementprogramme")
@@ -502,24 +690,432 @@ class Ui_Form(object):
         self.stackedWidget.addWidget(self.FichesEvaluation)
         self.AvisEtudiants = QWidget()
         self.AvisEtudiants.setObjectName(u"AvisEtudiants")
-        self.label_5 = QLabel(self.AvisEtudiants)
-        self.label_5.setObjectName(u"label_5")
-        self.label_5.setGeometry(QRect(140, 150, 251, 41))
-        self.label_5.setFont(font)
+        self.groupBox_3 = QGroupBox(self.AvisEtudiants)
+        self.groupBox_3.setObjectName(u"groupBox_3")
+        self.groupBox_3.setGeometry(QRect(0, 220, 581, 281))
+        self.groupBox_3.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.gridLayout_3 = QGridLayout(self.groupBox_3)
+        self.gridLayout_3.setObjectName(u"gridLayout_3")
+        self.tableWidget_3 = QTableWidget(self.groupBox_3)
+        if (self.tableWidget_3.columnCount() < 2):
+            self.tableWidget_3.setColumnCount(2)
+        __qtablewidgetitem8 = QTableWidgetItem()
+        self.tableWidget_3.setHorizontalHeaderItem(0, __qtablewidgetitem8)
+        __qtablewidgetitem9 = QTableWidgetItem()
+        self.tableWidget_3.setHorizontalHeaderItem(1, __qtablewidgetitem9)
+        self.tableWidget_3.setObjectName(u"tableWidget_3")
+        self.tableWidget_3.setStyleSheet(u"border: 1px solid #c6c6c6;\n"
+"border-radius: 5px;")
+        self.tableWidget_3.horizontalHeader().setCascadingSectionResizes(False)
+        self.tableWidget_3.horizontalHeader().setDefaultSectionSize(132)
+        self.tableWidget_3.horizontalHeader().setStretchLastSection(True)
+
+        self.gridLayout_3.addWidget(self.tableWidget_3, 1, 0, 1, 1)
+
+        self.widget_2 = QWidget(self.AvisEtudiants)
+        self.widget_2.setObjectName(u"widget_2")
+        self.widget_2.setGeometry(QRect(10, 10, 581, 171))
+        self.btn_avis = QPushButton(self.widget_2)
+        self.btn_avis.setObjectName(u"btn_avis")
+        self.btn_avis.setGeometry(QRect(0, 110, 581, 39))
+        self.btn_avis.setStyleSheet(u"QPushButton {\n"
+"    background-color: #333333; \n"
+"    color: #FFFFFF; \n"
+"    border: 2px solid #333333; /* Bordure */\n"
+"    border-radius: 10px; \n"
+"    padding: 8px 16px;\n"
+"    font-size: 14px; \n"
+"}\n"
+"\n"
+"/* Changement de style au survol */\n"
+"QPushButton:hover {\n"
+"    background-color: #555555;\n"
+"    border-color: #555555; \n"
+"}\n"
+"\n"
+"/* Changement de style lorsqu'on clique */\n"
+"QPushButton:pressed {\n"
+"    background-color: #222222; /* Couleur de fond lors du clic */\n"
+"    border-color: #222222; /* Bordure lors du clic */\n"
+"    color: #CCCCCC; /* Couleur du texte lors du clic */\n"
+"}\n"
+"")
+        self.widget3 = QWidget(self.widget_2)
+        self.widget3.setObjectName(u"widget3")
+        self.widget3.setGeometry(QRect(0, 10, 581, 79))
+        self.verticalLayout_8 = QVBoxLayout(self.widget3)
+        self.verticalLayout_8.setObjectName(u"verticalLayout_8")
+        self.verticalLayout_8.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_11 = QHBoxLayout()
+        self.horizontalLayout_11.setObjectName(u"horizontalLayout_11")
+        self.label_17 = QLabel(self.widget3)
+        self.label_17.setObjectName(u"label_17")
+
+        self.horizontalLayout_11.addWidget(self.label_17)
+
+        self.lineEdit_7 = QLineEdit(self.widget3)
+        self.lineEdit_7.setObjectName(u"lineEdit_7")
+        self.lineEdit_7.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
+"QLineEdit {\n"
+"    background-color: transparent; /* Fond transparent */\n"
+"    border: none; /* Pas de bordure par d\u00e9faut */\n"
+"    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */\n"
+"    padding: 2px; /* Espacement du texte \u00e0 l'int\u00e9rieur */\n"
+"    font-size: 16px; /* Taille de la police */\n"
+"    color: #333333; /* Couleur du texte */\n"
+"}\n"
+"\n"
+"/* Changement de style au survol */\n"
+"QLineEdit:hover {\n"
+"    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */\n"
+"}\n"
+"\n"
+"/* Changement de style lorsqu'il est actif/focus */\n"
+"QLineEdit:focus {\n"
+"    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */\n"
+"}\n"
+"")
+
+        self.horizontalLayout_11.addWidget(self.lineEdit_7)
+
+
+        self.verticalLayout_8.addLayout(self.horizontalLayout_11)
+
+        self.horizontalLayout_10 = QHBoxLayout()
+        self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
+        self.label_16 = QLabel(self.widget3)
+        self.label_16.setObjectName(u"label_16")
+
+        self.horizontalLayout_10.addWidget(self.label_16)
+
+        self.lineEdit_6 = QLineEdit(self.widget3)
+        self.lineEdit_6.setObjectName(u"lineEdit_6")
+        self.lineEdit_6.setMaximumSize(QSize(16777215, 16777215))
+        self.lineEdit_6.setBaseSize(QSize(0, 0))
+        self.lineEdit_6.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
+"QLineEdit {\n"
+"    background-color: transparent; /* Fond transparent */\n"
+"    border: none; /* Pas de bordure par d\u00e9faut */\n"
+"    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */\n"
+"    padding: 2px; /* Espacement du texte \u00e0 l'int\u00e9rieur */\n"
+"    font-size: 16px; /* Taille de la police */\n"
+"    color: #333333; /* Couleur du texte */\n"
+"}\n"
+"\n"
+"/* Changement de style au survol */\n"
+"QLineEdit:hover {\n"
+"    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */\n"
+"}\n"
+"\n"
+"/* Changement de style lorsqu'il est actif/focus */\n"
+"QLineEdit:focus {\n"
+"    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */\n"
+"}\n"
+"")
+        self.lineEdit_6.setReadOnly(False)
+
+        self.horizontalLayout_10.addWidget(self.lineEdit_6)
+
+
+        self.verticalLayout_8.addLayout(self.horizontalLayout_10)
+
         self.stackedWidget.addWidget(self.AvisEtudiants)
         self.RapportMensuel = QWidget()
         self.RapportMensuel.setObjectName(u"RapportMensuel")
-        self.label_11 = QLabel(self.RapportMensuel)
+        self.widget_8 = QWidget(self.RapportMensuel)
+        self.widget_8.setObjectName(u"widget_8")
+        self.widget_8.setGeometry(QRect(10, 10, 561, 91))
+        self.btn_date_rapport = QPushButton(self.widget_8)
+        self.btn_date_rapport.setObjectName(u"btn_date_rapport")
+        self.btn_date_rapport.setGeometry(QRect(0, 40, 559, 39))
+        self.btn_date_rapport.setStyleSheet(u"QPushButton {\n"
+"    background-color: #333333; \n"
+"    color: #FFFFFF; \n"
+"    border: 2px solid #333333; /* Bordure */\n"
+"    border-radius: 10px; \n"
+"    padding: 8px 16px;\n"
+"    font-size: 14px; \n"
+"}\n"
+"\n"
+"/* Changement de style au survol */\n"
+"QPushButton:hover {\n"
+"    background-color: #555555;\n"
+"    border-color: #555555; \n"
+"}\n"
+"\n"
+"/* Changement de style lorsqu'on clique */\n"
+"QPushButton:pressed {\n"
+"    background-color: #222222; /* Couleur de fond lors du clic */\n"
+"    border-color: #222222; /* Bordure lors du clic */\n"
+"    color: #CCCCCC; /* Couleur du texte lors du clic */\n"
+"}\n"
+"")
+        self.widget4 = QWidget(self.widget_8)
+        self.widget4.setObjectName(u"widget4")
+        self.widget4.setGeometry(QRect(0, 0, 561, 30))
+        self.horizontalLayout_22 = QHBoxLayout(self.widget4)
+        self.horizontalLayout_22.setObjectName(u"horizontalLayout_22")
+        self.horizontalLayout_22.setContentsMargins(0, 0, 0, 0)
+        self.label_11 = QLabel(self.widget4)
         self.label_11.setObjectName(u"label_11")
-        self.label_11.setGeometry(QRect(150, 140, 261, 41))
-        self.label_11.setFont(font)
+
+        self.horizontalLayout_22.addWidget(self.label_11)
+
+        self.lineEdit_18 = QLineEdit(self.widget4)
+        self.lineEdit_18.setObjectName(u"lineEdit_18")
+        self.lineEdit_18.setMaximumSize(QSize(16777215, 16777215))
+        self.lineEdit_18.setBaseSize(QSize(0, 0))
+        self.lineEdit_18.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
+"QLineEdit {\n"
+"    background-color: transparent; /* Fond transparent */\n"
+"    border: none; /* Pas de bordure par d\u00e9faut */\n"
+"    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */\n"
+"    padding: 2px; /* Espacement du texte \u00e0 l'int\u00e9rieur */\n"
+"    font-size: 16px; /* Taille de la police */\n"
+"    color: #333333; /* Couleur du texte */\n"
+"}\n"
+"\n"
+"/* Changement de style au survol */\n"
+"QLineEdit:hover {\n"
+"    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */\n"
+"}\n"
+"\n"
+"/* Changement de style lorsqu'il est actif/focus */\n"
+"QLineEdit:focus {\n"
+"    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */\n"
+"}\n"
+"	")
+        self.lineEdit_18.setReadOnly(False)
+
+        self.horizontalLayout_22.addWidget(self.lineEdit_18)
+
+        self.widget5 = QWidget(self.RapportMensuel)
+        self.widget5.setObjectName(u"widget5")
+        self.widget5.setGeometry(QRect(10, 130, 561, 391))
+        self.verticalLayout_6 = QVBoxLayout(self.widget5)
+        self.verticalLayout_6.setObjectName(u"verticalLayout_6")
+        self.verticalLayout_6.setContentsMargins(0, 0, 0, 0)
+        self.textEdit = QTextEdit(self.widget5)
+        self.textEdit.setObjectName(u"textEdit")
+
+        self.verticalLayout_6.addWidget(self.textEdit)
+
+        self.recherche_matiere_7 = QPushButton(self.widget5)
+        self.recherche_matiere_7.setObjectName(u"recherche_matiere_7")
+        self.recherche_matiere_7.setStyleSheet(u"QPushButton {\n"
+"    background-color: #333333; \n"
+"    color: #FFFFFF; \n"
+"    border: 2px solid #333333; /* Bordure */\n"
+"    border-radius: 10px; \n"
+"    padding: 8px 16px;\n"
+"    font-size: 14px; \n"
+"}\n"
+"\n"
+"/* Changement de style au survol */\n"
+"QPushButton:hover {\n"
+"    background-color: #555555;\n"
+"    border-color: #555555; \n"
+"}\n"
+"\n"
+"/* Changement de style lorsqu'on clique */\n"
+"QPushButton:pressed {\n"
+"    background-color: #222222; /* Couleur de fond lors du clic */\n"
+"    border-color: #222222; /* Bordure lors du clic */\n"
+"    color: #CCCCCC; /* Couleur du texte lors du clic */\n"
+"}\n"
+"")
+
+        self.verticalLayout_6.addWidget(self.recherche_matiere_7)
+
         self.stackedWidget.addWidget(self.RapportMensuel)
         self.Rattrapagecours = QWidget()
         self.Rattrapagecours.setObjectName(u"Rattrapagecours")
-        self.label_12 = QLabel(self.Rattrapagecours)
-        self.label_12.setObjectName(u"label_12")
-        self.label_12.setGeometry(QRect(140, 150, 321, 41))
-        self.label_12.setFont(font)
+        self.widget_6 = QWidget(self.Rattrapagecours)
+        self.widget_6.setObjectName(u"widget_6")
+        self.widget_6.setGeometry(QRect(20, 30, 581, 211))
+        self.widget6 = QWidget(self.widget_6)
+        self.widget6.setObjectName(u"widget6")
+        self.widget6.setGeometry(QRect(0, 10, 581, 185))
+        self.verticalLayout_7 = QVBoxLayout(self.widget6)
+        self.verticalLayout_7.setObjectName(u"verticalLayout_7")
+        self.verticalLayout_7.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_25 = QHBoxLayout()
+        self.horizontalLayout_25.setObjectName(u"horizontalLayout_25")
+        self.label_32 = QLabel(self.widget6)
+        self.label_32.setObjectName(u"label_32")
+
+        self.horizontalLayout_25.addWidget(self.label_32)
+
+        self.lineEdit_17 = QLineEdit(self.widget6)
+        self.lineEdit_17.setObjectName(u"lineEdit_17")
+        self.lineEdit_17.setMaximumSize(QSize(16777215, 16777215))
+        self.lineEdit_17.setBaseSize(QSize(0, 0))
+        self.lineEdit_17.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
+"QLineEdit {\n"
+"    background-color: transparent; /* Fond transparent */\n"
+"    border: none; /* Pas de bordure par d\u00e9faut */\n"
+"    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */\n"
+"    padding: 2px; /* Espacement du texte \u00e0 l'int\u00e9rieur */\n"
+"    font-size: 16px; /* Taille de la police */\n"
+"    color: #333333; /* Couleur du texte */\n"
+"}\n"
+"\n"
+"/* Changement de style au survol */\n"
+"QLineEdit:hover {\n"
+"    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */\n"
+"}\n"
+"\n"
+"/* Changement de style lorsqu'il est actif/focus */\n"
+"QLineEdit:focus {\n"
+"    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */\n"
+"}\n"
+"	\n"
+"")
+        self.lineEdit_17.setReadOnly(False)
+
+        self.horizontalLayout_25.addWidget(self.lineEdit_17)
+
+
+        self.verticalLayout_7.addLayout(self.horizontalLayout_25)
+
+        self.horizontalLayout_20 = QHBoxLayout()
+        self.horizontalLayout_20.setObjectName(u"horizontalLayout_20")
+        self.label_31 = QLabel(self.widget6)
+        self.label_31.setObjectName(u"label_31")
+
+        self.horizontalLayout_20.addWidget(self.label_31)
+
+        self.lineEdit_16 = QLineEdit(self.widget6)
+        self.lineEdit_16.setObjectName(u"lineEdit_16")
+        self.lineEdit_16.setMaximumSize(QSize(16777215, 16777215))
+        self.lineEdit_16.setBaseSize(QSize(0, 0))
+        self.lineEdit_16.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
+"QLineEdit {\n"
+"    background-color: transparent; /* Fond transparent */\n"
+"    border: none; /* Pas de bordure par d\u00e9faut */\n"
+"    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */\n"
+"    padding: 2px; /* Espacement du texte \u00e0 l'int\u00e9rieur */\n"
+"    font-size: 16px; /* Taille de la police */\n"
+"    color: #333333; /* Couleur du texte */\n"
+"}\n"
+"\n"
+"/* Changement de style au survol */\n"
+"QLineEdit:hover {\n"
+"    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */\n"
+"}\n"
+"\n"
+"/* Changement de style lorsqu'il est actif/focus */\n"
+"QLineEdit:focus {\n"
+"    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */\n"
+"}\n"
+"	")
+        self.lineEdit_16.setReadOnly(False)
+
+        self.horizontalLayout_20.addWidget(self.lineEdit_16)
+
+
+        self.verticalLayout_7.addLayout(self.horizontalLayout_20)
+
+        self.horizontalLayout_18 = QHBoxLayout()
+        self.horizontalLayout_18.setObjectName(u"horizontalLayout_18")
+        self.label_29 = QLabel(self.widget6)
+        self.label_29.setObjectName(u"label_29")
+
+        self.horizontalLayout_18.addWidget(self.label_29)
+
+        self.lineEdit_14 = QLineEdit(self.widget6)
+        self.lineEdit_14.setObjectName(u"lineEdit_14")
+        self.lineEdit_14.setMaximumSize(QSize(16777215, 16777215))
+        self.lineEdit_14.setBaseSize(QSize(0, 0))
+        self.lineEdit_14.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
+"QLineEdit {\n"
+"    background-color: transparent; /* Fond transparent */\n"
+"    border: none; /* Pas de bordure par d\u00e9faut */\n"
+"    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */\n"
+"    padding: 2px; /* Espacement du texte \u00e0 l'int\u00e9rieur */\n"
+"    font-size: 16px; /* Taille de la police */\n"
+"    color: #333333; /* Couleur du texte */\n"
+"}\n"
+"\n"
+"/* Changement de style au survol */\n"
+"QLineEdit:hover {\n"
+"    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */\n"
+"}\n"
+"\n"
+"/* Changement de style lorsqu'il est actif/focus */\n"
+"QLineEdit:focus {\n"
+"    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */\n"
+"}\n"
+"	")
+        self.lineEdit_14.setReadOnly(False)
+
+        self.horizontalLayout_18.addWidget(self.lineEdit_14)
+
+
+        self.verticalLayout_7.addLayout(self.horizontalLayout_18)
+
+        self.horizontalLayout_19 = QHBoxLayout()
+        self.horizontalLayout_19.setObjectName(u"horizontalLayout_19")
+        self.label_30 = QLabel(self.widget6)
+        self.label_30.setObjectName(u"label_30")
+
+        self.horizontalLayout_19.addWidget(self.label_30)
+
+        self.lineEdit_15 = QLineEdit(self.widget6)
+        self.lineEdit_15.setObjectName(u"lineEdit_15")
+        self.lineEdit_15.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
+"QLineEdit {\n"
+"    background-color: transparent; /* Fond transparent */\n"
+"    border: none; /* Pas de bordure par d\u00e9faut */\n"
+"    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */\n"
+"    padding: 2px; /* Espacement du texte \u00e0 l'int\u00e9rieur */\n"
+"    font-size: 16px; /* Taille de la police */\n"
+"    color: #333333; /* Couleur du texte */\n"
+"}\n"
+"\n"
+"/* Changement de style au survol */\n"
+"QLineEdit:hover {\n"
+"    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */\n"
+"}\n"
+"\n"
+"/* Changement de style lorsqu'il est actif/focus */\n"
+"QLineEdit:focus {\n"
+"    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */\n"
+"}\n"
+"	")
+
+        self.horizontalLayout_19.addWidget(self.lineEdit_15)
+
+
+        self.verticalLayout_7.addLayout(self.horizontalLayout_19)
+
+        self.btn_rattrapage = QPushButton(self.widget6)
+        self.btn_rattrapage.setObjectName(u"btn_rattrapage")
+        self.btn_rattrapage.setStyleSheet(u"QPushButton {\n"
+"    background-color: #333333; \n"
+"    color: #FFFFFF; \n"
+"    border: 2px solid #333333; /* Bordure */\n"
+"    border-radius: 10px; \n"
+"    padding: 8px 16px;\n"
+"    font-size: 14px; \n"
+"}\n"
+"\n"
+"/* Changement de style au survol */\n"
+"QPushButton:hover {\n"
+"    background-color: #555555;\n"
+"    border-color: #555555; \n"
+"}\n"
+"\n"
+"/* Changement de style lorsqu'on clique */\n"
+"QPushButton:pressed {\n"
+"    background-color: #222222; /* Couleur de fond lors du clic */\n"
+"    border-color: #222222; /* Bordure lors du clic */\n"
+"    color: #CCCCCC; /* Couleur du texte lors du clic */\n"
+"}\n"
+"")
+
+        self.verticalLayout_7.addWidget(self.btn_rattrapage)
+
         self.stackedWidget.addWidget(self.Rattrapagecours)
 
         self.verticalLayout_5.addWidget(self.stackedWidget)
@@ -528,6 +1124,24 @@ class Ui_Form(object):
         self.label.setObjectName(u"label")
         self.label.setGeometry(QRect(10, 10, 36, 16))
         self.label.setStyleSheet(u"image: url(:/logo pers.jpeg);")
+        self.widget7 = QWidget(Form)
+        self.widget7.setObjectName(u"widget7")
+        self.widget7.setGeometry(QRect(0, 0, 2, 2))
+        self.horizontalLayout_17 = QHBoxLayout(self.widget7)
+        self.horizontalLayout_17.setObjectName(u"horizontalLayout_17")
+        self.horizontalLayout_17.setContentsMargins(0, 0, 0, 0)
+        self.widget8 = QWidget(Form)
+        self.widget8.setObjectName(u"widget8")
+        self.widget8.setGeometry(QRect(0, 0, 2, 2))
+        self.horizontalLayout_21 = QHBoxLayout(self.widget8)
+        self.horizontalLayout_21.setObjectName(u"horizontalLayout_21")
+        self.horizontalLayout_21.setContentsMargins(0, 0, 0, 0)
+        self.widget9 = QWidget(Form)
+        self.widget9.setObjectName(u"widget9")
+        self.widget9.setGeometry(QRect(0, 0, 2, 2))
+        self.horizontalLayout_23 = QHBoxLayout(self.widget9)
+        self.horizontalLayout_23.setObjectName(u"horizontalLayout_23")
+        self.horizontalLayout_23.setContentsMargins(0, 0, 0, 0)
 
         self.retranslateUi(Form)
         self.menu.toggled.connect(self.icon_only_widget.setHidden)
@@ -553,7 +1167,7 @@ class Ui_Form(object):
         self.Rattrapages_2.toggled.connect(self.Rattrapages_1.setChecked)
         self.Rattrapages_1.toggled.connect(self.Rattrapages_2.setChecked)
 
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(8)
 
 
         QMetaObject.connectSlotsByName(Form)
@@ -586,7 +1200,7 @@ class Ui_Form(object):
         self.menu.setText("")
         self.pushButton_29.setText("")
         self.pushButton_30.setText("")
-        self.label_4.setText(QCoreApplication.translate("Form", u"ACCUEIL", None))
+        self.label_4.setText(QCoreApplication.translate("Form", u"BIENVENU DANS VOTRE PAGE D' ACCUEIL", None))
         self.groupBox_2.setTitle(QCoreApplication.translate("Form", u"Cahier de texte", None))
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("Form", u"Nom enseignant ", None));
@@ -596,17 +1210,40 @@ class Ui_Form(object):
         ___qtablewidgetitem2.setText(QCoreApplication.translate("Form", u"Duree du cours ", None));
         ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
         ___qtablewidgetitem3.setText(QCoreApplication.translate("Form", u"Date du cours", None));
-        self.label_6.setText(QCoreApplication.translate("Form", u"Rensigner la date", None))
+        self.btn_cahier.setText(QCoreApplication.translate("Form", u"Valider", None))
         self.label_13.setText(QCoreApplication.translate("Form", u"Renseigner la classe", None))
-        self.pushButton.setText(QCoreApplication.translate("Form", u"PushButton", None))
-        self.pushButton_2.setText(QCoreApplication.translate("Form", u"PushButton", None))
+        self.label_6.setText(QCoreApplication.translate("Form", u"Rensigner la matiere", None))
         self.label_9.setText(QCoreApplication.translate("Form", u"EFFECTIVITE DES ENSEIGNEMENTS", None))
-        self.label_7.setText(QCoreApplication.translate("Form", u"CONFORMITE COURS", None))
+        self.groupBox_6.setTitle(QCoreApplication.translate("Form", u"conformite", None))
+        ___qtablewidgetitem4 = self.tableWidget_6.horizontalHeaderItem(0)
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("Form", u"Nom enseignant ", None));
+        ___qtablewidgetitem5 = self.tableWidget_6.horizontalHeaderItem(1)
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("Form", u"Duree du cours ", None));
+        ___qtablewidgetitem6 = self.tableWidget_6.horizontalHeaderItem(2)
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("Form", u"Plan cours ( cahier de texte)", None));
+        ___qtablewidgetitem7 = self.tableWidget_6.horizontalHeaderItem(3)
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("Form", u"Syllabus", None));
+        self.btn_conformite.setText(QCoreApplication.translate("Form", u"Valider", None))
+        self.label_27.setText(QCoreApplication.translate("Form", u"Rensigner la matiere", None))
+        self.label_28.setText(QCoreApplication.translate("Form", u"Renseigner le nom de l'enseignant", None))
         self.label_8.setText(QCoreApplication.translate("Form", u"DEROULMENT PROGRAMMES", None))
         self.label_10.setText(QCoreApplication.translate("Form", u"FICHES D' EVALUATION", None))
-        self.label_5.setText(QCoreApplication.translate("Form", u"AVIS ETUDIANTS", None))
-        self.label_11.setText(QCoreApplication.translate("Form", u"RAPPORT MENSUEL", None))
-        self.label_12.setText(QCoreApplication.translate("Form", u"RATTRAPAGE DES COURS", None))
+        self.groupBox_3.setTitle(QCoreApplication.translate("Form", u"Avis", None))
+        ___qtablewidgetitem8 = self.tableWidget_3.horizontalHeaderItem(0)
+        ___qtablewidgetitem8.setText(QCoreApplication.translate("Form", u"Matiere", None));
+        ___qtablewidgetitem9 = self.tableWidget_3.horizontalHeaderItem(1)
+        ___qtablewidgetitem9.setText(QCoreApplication.translate("Form", u"Avis", None));
+        self.btn_avis.setText(QCoreApplication.translate("Form", u"Valider", None))
+        self.label_17.setText(QCoreApplication.translate("Form", u"Renseigner la classe", None))
+        self.label_16.setText(QCoreApplication.translate("Form", u"Rensigner la matiere", None))
+        self.btn_date_rapport.setText(QCoreApplication.translate("Form", u"Valider", None))
+        self.label_11.setText(QCoreApplication.translate("Form", u"Rensigner la date de redaction du rapport", None))
+        self.recherche_matiere_7.setText(QCoreApplication.translate("Form", u"Envoyer le rapport mensuel", None))
+        self.label_32.setText(QCoreApplication.translate("Form", u"Rensigner la nouvelle date du cours", None))
+        self.label_31.setText(QCoreApplication.translate("Form", u"Rensigner La nouvelle date du cours", None))
+        self.label_29.setText(QCoreApplication.translate("Form", u"Renseigner le nom du prof", None))
+        self.label_30.setText(QCoreApplication.translate("Form", u"Reinsgeigner la matiere", None))
+        self.btn_rattrapage.setText(QCoreApplication.translate("Form", u"Valider", None))
         self.label.setText("")
     # retranslateUi
 
