@@ -334,33 +334,11 @@ class Ui_Form(object):
 
         self.horizontalLayout_5.addWidget(self.menu)
 
-        self.horizontalSpacer = QSpacerItem(161, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        self.horizontalSpacer = QSpacerItem(247, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_5.addItem(self.horizontalSpacer)
 
-        self.horizontalLayout_4 = QHBoxLayout()
-        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
-        self.lineEdit = QLineEdit(self.header)
-        self.lineEdit.setObjectName(u"lineEdit")
-
-        self.horizontalLayout_4.addWidget(self.lineEdit)
-
-        self.pushButton_29 = QPushButton(self.header)
-        self.pushButton_29.setObjectName(u"pushButton_29")
-        self.pushButton_29.setStyleSheet(u"	border:none;\n"
-"\n"
-"")
-        icon11 = QIcon()
-        icon11.addFile(u"Images/loupe.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_29.setIcon(icon11)
-        self.pushButton_29.setIconSize(QSize(20, 20))
-
-        self.horizontalLayout_4.addWidget(self.pushButton_29)
-
-
-        self.horizontalLayout_5.addLayout(self.horizontalLayout_4)
-
-        self.horizontalSpacer_2 = QSpacerItem(161, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
+        self.horizontalSpacer_2 = QSpacerItem(246, 20, QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Minimum)
 
         self.horizontalLayout_5.addItem(self.horizontalSpacer_2)
 
@@ -369,9 +347,9 @@ class Ui_Form(object):
         self.pushButton_30.setStyleSheet(u"border: none;\n"
 "\n"
 "")
-        icon12 = QIcon()
-        icon12.addFile(u"Images/profil.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_30.setIcon(icon12)
+        icon11 = QIcon()
+        icon11.addFile(u"Images/profil.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_30.setIcon(icon11)
         self.pushButton_30.setIconSize(QSize(30, 20))
 
         self.horizontalLayout_5.addWidget(self.pushButton_30)
@@ -402,30 +380,31 @@ class Ui_Form(object):
         self.groupBox_2.setStyleSheet(u"background-color: rgb(255, 255, 255);")
         self.gridLayout = QGridLayout(self.groupBox_2)
         self.gridLayout.setObjectName(u"gridLayout")
-        self.tableWidget = QTableWidget(self.groupBox_2)
-        if (self.tableWidget.columnCount() < 4):
-            self.tableWidget.setColumnCount(4)
+        self.table_cahier = QTableWidget(self.groupBox_2)
+        if (self.table_cahier.columnCount() < 4):
+            self.table_cahier.setColumnCount(4)
         __qtablewidgetitem = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        self.table_cahier.setHorizontalHeaderItem(0, __qtablewidgetitem)
         __qtablewidgetitem1 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        self.table_cahier.setHorizontalHeaderItem(1, __qtablewidgetitem1)
         __qtablewidgetitem2 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        self.table_cahier.setHorizontalHeaderItem(2, __qtablewidgetitem2)
         __qtablewidgetitem3 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
-        self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.setStyleSheet(u"border: 1px solid #c6c6c6;\n"
+        self.table_cahier.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        self.table_cahier.setObjectName(u"table_cahier")
+        self.table_cahier.setStyleSheet(u"border: 1px solid #c6c6c6;\n"
 "border-radius: 5px;")
-        self.tableWidget.horizontalHeader().setCascadingSectionResizes(False)
-        self.tableWidget.horizontalHeader().setDefaultSectionSize(132)
-        self.tableWidget.horizontalHeader().setStretchLastSection(True)
+        self.table_cahier.horizontalHeader().setCascadingSectionResizes(False)
+        self.table_cahier.horizontalHeader().setDefaultSectionSize(132)
+        self.table_cahier.horizontalHeader().setStretchLastSection(True)
 
-        self.gridLayout.addWidget(self.tableWidget, 0, 0, 1, 1)
+        self.gridLayout.addWidget(self.table_cahier, 0, 0, 1, 1)
 
         self.widget = QWidget(self.Cahierdetexte)
         self.widget.setObjectName(u"widget")
         self.widget.setGeometry(QRect(10, 10, 581, 131))
         self.btn_cahier = QPushButton(self.widget)
+        self.btn_cahier.clicked.connect(self.search_cahier)
         self.btn_cahier.setObjectName(u"btn_cahier")
         self.btn_cahier.setGeometry(QRect(0, 100, 581, 31))
         self.btn_cahier.setStyleSheet(u"QPushButton {\n"
@@ -458,14 +437,14 @@ class Ui_Form(object):
         self.verticalLayout_9.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_7 = QHBoxLayout()
         self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
-        self.label_13 = QLabel(self.widget1)
-        self.label_13.setObjectName(u"label_13")
+        self.label_12 = QLabel(self.widget1)
+        self.label_12.setObjectName(u"label_12")
 
-        self.horizontalLayout_7.addWidget(self.label_13)
+        self.horizontalLayout_7.addWidget(self.label_12)
 
-        self.lineEdit_3 = QLineEdit(self.widget1)
-        self.lineEdit_3.setObjectName(u"lineEdit_3")
-        self.lineEdit_3.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
+        self.edit_classe_cahier = QLineEdit(self.widget1)
+        self.edit_classe_cahier.setObjectName(u"edit_classe_cahier")
+        self.edit_classe_cahier.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
 "QLineEdit {\n"
 "    background-color: transparent; /* Fond transparent */\n"
 "    border: none; /* Pas de bordure par d\u00e9faut */\n"
@@ -486,7 +465,7 @@ class Ui_Form(object):
 "}\n"
 "")
 
-        self.horizontalLayout_7.addWidget(self.lineEdit_3)
+        self.horizontalLayout_7.addWidget(self.edit_classe_cahier)
 
 
         self.verticalLayout_9.addLayout(self.horizontalLayout_7)
@@ -498,11 +477,11 @@ class Ui_Form(object):
 
         self.horizontalLayout_6.addWidget(self.label_6)
 
-        self.lineEdit_2 = QLineEdit(self.widget1)
-        self.lineEdit_2.setObjectName(u"lineEdit_2")
-        self.lineEdit_2.setMaximumSize(QSize(16777215, 16777215))
-        self.lineEdit_2.setBaseSize(QSize(0, 0))
-        self.lineEdit_2.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
+        self.edit_matiere_cahier = QLineEdit(self.widget1)
+        self.edit_matiere_cahier.setObjectName(u"edit_matiere_cahier")
+        self.edit_matiere_cahier.setMaximumSize(QSize(16777215, 16777215))
+        self.edit_matiere_cahier.setBaseSize(QSize(0, 0))
+        self.edit_matiere_cahier.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
 "QLineEdit {\n"
 "    background-color: transparent; /* Fond transparent */\n"
 "    border: none; /* Pas de bordure par d\u00e9faut */\n"
@@ -522,9 +501,9 @@ class Ui_Form(object):
 "    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */\n"
 "}\n"
 "")
-        self.lineEdit_2.setReadOnly(False)
+        self.edit_matiere_cahier.setReadOnly(False)
 
-        self.horizontalLayout_6.addWidget(self.lineEdit_2)
+        self.horizontalLayout_6.addWidget(self.edit_matiere_cahier)
 
 
         self.verticalLayout_9.addLayout(self.horizontalLayout_6)
@@ -545,30 +524,31 @@ class Ui_Form(object):
         self.groupBox_6.setStyleSheet(u"background-color: rgb(255, 255, 255);")
         self.gridLayout_6 = QGridLayout(self.groupBox_6)
         self.gridLayout_6.setObjectName(u"gridLayout_6")
-        self.tableWidget_6 = QTableWidget(self.groupBox_6)
-        if (self.tableWidget_6.columnCount() < 4):
-            self.tableWidget_6.setColumnCount(4)
+        self.table_conformite = QTableWidget(self.groupBox_6)
+        if (self.table_conformite.columnCount() < 4):
+            self.table_conformite.setColumnCount(4)
         __qtablewidgetitem4 = QTableWidgetItem()
-        self.tableWidget_6.setHorizontalHeaderItem(0, __qtablewidgetitem4)
+        self.table_conformite.setHorizontalHeaderItem(0, __qtablewidgetitem4)
         __qtablewidgetitem5 = QTableWidgetItem()
-        self.tableWidget_6.setHorizontalHeaderItem(1, __qtablewidgetitem5)
+        self.table_conformite.setHorizontalHeaderItem(1, __qtablewidgetitem5)
         __qtablewidgetitem6 = QTableWidgetItem()
-        self.tableWidget_6.setHorizontalHeaderItem(2, __qtablewidgetitem6)
+        self.table_conformite.setHorizontalHeaderItem(2, __qtablewidgetitem6)
         __qtablewidgetitem7 = QTableWidgetItem()
-        self.tableWidget_6.setHorizontalHeaderItem(3, __qtablewidgetitem7)
-        self.tableWidget_6.setObjectName(u"tableWidget_6")
-        self.tableWidget_6.setStyleSheet(u"border: 1px solid #c6c6c6;\n"
+        self.table_conformite.setHorizontalHeaderItem(3, __qtablewidgetitem7)
+        self.table_conformite.setObjectName(u"table_conformite")
+        self.table_conformite.setStyleSheet(u"border: 1px solid #c6c6c6;\n"
 "border-radius: 5px;")
-        self.tableWidget_6.horizontalHeader().setCascadingSectionResizes(False)
-        self.tableWidget_6.horizontalHeader().setDefaultSectionSize(132)
-        self.tableWidget_6.horizontalHeader().setStretchLastSection(True)
+        self.table_conformite.horizontalHeader().setCascadingSectionResizes(False)
+        self.table_conformite.horizontalHeader().setDefaultSectionSize(132)
+        self.table_conformite.horizontalHeader().setStretchLastSection(True)
 
-        self.gridLayout_6.addWidget(self.tableWidget_6, 0, 0, 1, 1)
+        self.gridLayout_6.addWidget(self.table_conformite, 0, 0, 1, 1)
 
         self.widget_5 = QWidget(self.Conformite)
         self.widget_5.setObjectName(u"widget_5")
         self.widget_5.setGeometry(QRect(10, 10, 581, 121))
         self.btn_conformite = QPushButton(self.widget_5)
+        self.btn_conformite.clicked.connect(self.search_conformite)
         self.btn_conformite.setObjectName(u"btn_conformite")
         self.btn_conformite.setGeometry(QRect(10, 80, 561, 39))
         self.btn_conformite.setStyleSheet(u"QPushButton {\n"
@@ -606,11 +586,11 @@ class Ui_Form(object):
 
         self.horizontalLayout_16.addWidget(self.label_27)
 
-        self.lineEdit_12 = QLineEdit(self.widget2)
-        self.lineEdit_12.setObjectName(u"lineEdit_12")
-        self.lineEdit_12.setMaximumSize(QSize(16777215, 16777215))
-        self.lineEdit_12.setBaseSize(QSize(0, 0))
-        self.lineEdit_12.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
+        self.edit_matiere_conformite = QLineEdit(self.widget2)
+        self.edit_matiere_conformite.setObjectName(u"edit_matiere_conformite")
+        self.edit_matiere_conformite.setMaximumSize(QSize(16777215, 16777215))
+        self.edit_matiere_conformite.setBaseSize(QSize(0, 0))
+        self.edit_matiere_conformite.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
 "QLineEdit {\n"
 "    background-color: transparent; /* Fond transparent */\n"
 "    border: none; /* Pas de bordure par d\u00e9faut */\n"
@@ -631,9 +611,9 @@ class Ui_Form(object):
 "}\n"
 "\n"
 "")
-        self.lineEdit_12.setReadOnly(False)
+        self.edit_matiere_conformite.setReadOnly(False)
 
-        self.horizontalLayout_16.addWidget(self.lineEdit_12)
+        self.horizontalLayout_16.addWidget(self.edit_matiere_conformite)
 
 
         self.verticalLayout_10.addLayout(self.horizontalLayout_16)
@@ -645,9 +625,9 @@ class Ui_Form(object):
 
         self.horizontalLayout_24.addWidget(self.label_28)
 
-        self.lineEdit_13 = QLineEdit(self.widget2)
-        self.lineEdit_13.setObjectName(u"lineEdit_13")
-        self.lineEdit_13.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
+        self.edit_nomEnseignant_conformite = QLineEdit(self.widget2)
+        self.edit_nomEnseignant_conformite.setObjectName(u"edit_nomEnseignant_conformite")
+        self.edit_nomEnseignant_conformite.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
 "QLineEdit {\n"
 "    background-color: transparent; /* Fond transparent */\n"
 "    border: none; /* Pas de bordure par d\u00e9faut */\n"
@@ -668,7 +648,7 @@ class Ui_Form(object):
 "}\n"
 "")
 
-        self.horizontalLayout_24.addWidget(self.lineEdit_13)
+        self.horizontalLayout_24.addWidget(self.edit_nomEnseignant_conformite)
 
 
         self.verticalLayout_10.addLayout(self.horizontalLayout_24)
@@ -696,26 +676,27 @@ class Ui_Form(object):
         self.groupBox_3.setStyleSheet(u"background-color: rgb(255, 255, 255);")
         self.gridLayout_3 = QGridLayout(self.groupBox_3)
         self.gridLayout_3.setObjectName(u"gridLayout_3")
-        self.tableWidget_3 = QTableWidget(self.groupBox_3)
-        if (self.tableWidget_3.columnCount() < 2):
-            self.tableWidget_3.setColumnCount(2)
+        self.table_avis = QTableWidget(self.groupBox_3)
+        if (self.table_avis.columnCount() < 2):
+            self.table_avis.setColumnCount(2)
         __qtablewidgetitem8 = QTableWidgetItem()
-        self.tableWidget_3.setHorizontalHeaderItem(0, __qtablewidgetitem8)
+        self.table_avis.setHorizontalHeaderItem(0, __qtablewidgetitem8)
         __qtablewidgetitem9 = QTableWidgetItem()
-        self.tableWidget_3.setHorizontalHeaderItem(1, __qtablewidgetitem9)
-        self.tableWidget_3.setObjectName(u"tableWidget_3")
-        self.tableWidget_3.setStyleSheet(u"border: 1px solid #c6c6c6;\n"
+        self.table_avis.setHorizontalHeaderItem(1, __qtablewidgetitem9)
+        self.table_avis.setObjectName(u"table_avis")
+        self.table_avis.setStyleSheet(u"border: 1px solid #c6c6c6;\n"
 "border-radius: 5px;")
-        self.tableWidget_3.horizontalHeader().setCascadingSectionResizes(False)
-        self.tableWidget_3.horizontalHeader().setDefaultSectionSize(132)
-        self.tableWidget_3.horizontalHeader().setStretchLastSection(True)
+        self.table_avis.horizontalHeader().setCascadingSectionResizes(False)
+        self.table_avis.horizontalHeader().setDefaultSectionSize(132)
+        self.table_avis.horizontalHeader().setStretchLastSection(True)
 
-        self.gridLayout_3.addWidget(self.tableWidget_3, 1, 0, 1, 1)
+        self.gridLayout_3.addWidget(self.table_avis, 1, 0, 1, 1)
 
         self.widget_2 = QWidget(self.AvisEtudiants)
         self.widget_2.setObjectName(u"widget_2")
         self.widget_2.setGeometry(QRect(10, 10, 581, 171))
         self.btn_avis = QPushButton(self.widget_2)
+        self.btn_avis.clicked.connect(self.search_avis)
         self.btn_avis.setObjectName(u"btn_avis")
         self.btn_avis.setGeometry(QRect(0, 110, 581, 39))
         self.btn_avis.setStyleSheet(u"QPushButton {\n"
@@ -753,9 +734,9 @@ class Ui_Form(object):
 
         self.horizontalLayout_11.addWidget(self.label_17)
 
-        self.lineEdit_7 = QLineEdit(self.widget3)
-        self.lineEdit_7.setObjectName(u"lineEdit_7")
-        self.lineEdit_7.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
+        self.edit_classe_avis = QLineEdit(self.widget3)
+        self.edit_classe_avis.setObjectName(u"edit_classe_avis")
+        self.edit_classe_avis.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
 "QLineEdit {\n"
 "    background-color: transparent; /* Fond transparent */\n"
 "    border: none; /* Pas de bordure par d\u00e9faut */\n"
@@ -776,7 +757,7 @@ class Ui_Form(object):
 "}\n"
 "")
 
-        self.horizontalLayout_11.addWidget(self.lineEdit_7)
+        self.horizontalLayout_11.addWidget(self.edit_classe_avis)
 
 
         self.verticalLayout_8.addLayout(self.horizontalLayout_11)
@@ -788,11 +769,11 @@ class Ui_Form(object):
 
         self.horizontalLayout_10.addWidget(self.label_16)
 
-        self.lineEdit_6 = QLineEdit(self.widget3)
-        self.lineEdit_6.setObjectName(u"lineEdit_6")
-        self.lineEdit_6.setMaximumSize(QSize(16777215, 16777215))
-        self.lineEdit_6.setBaseSize(QSize(0, 0))
-        self.lineEdit_6.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
+        self.edit_matiere_avis = QLineEdit(self.widget3)
+        self.edit_matiere_avis.setObjectName(u"edit_matiere_avis")
+        self.edit_matiere_avis.setMaximumSize(QSize(16777215, 16777215))
+        self.edit_matiere_avis.setBaseSize(QSize(0, 0))
+        self.edit_matiere_avis.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
 "QLineEdit {\n"
 "    background-color: transparent; /* Fond transparent */\n"
 "    border: none; /* Pas de bordure par d\u00e9faut */\n"
@@ -812,9 +793,9 @@ class Ui_Form(object):
 "    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */\n"
 "}\n"
 "")
-        self.lineEdit_6.setReadOnly(False)
+        self.edit_matiere_avis.setReadOnly(False)
 
-        self.horizontalLayout_10.addWidget(self.lineEdit_6)
+        self.horizontalLayout_10.addWidget(self.edit_matiere_avis)
 
 
         self.verticalLayout_8.addLayout(self.horizontalLayout_10)
@@ -824,32 +805,7 @@ class Ui_Form(object):
         self.RapportMensuel.setObjectName(u"RapportMensuel")
         self.widget_8 = QWidget(self.RapportMensuel)
         self.widget_8.setObjectName(u"widget_8")
-        self.widget_8.setGeometry(QRect(10, 10, 561, 91))
-        self.btn_date_rapport = QPushButton(self.widget_8)
-        self.btn_date_rapport.setObjectName(u"btn_date_rapport")
-        self.btn_date_rapport.setGeometry(QRect(0, 40, 559, 39))
-        self.btn_date_rapport.setStyleSheet(u"QPushButton {\n"
-"    background-color: #333333; \n"
-"    color: #FFFFFF; \n"
-"    border: 2px solid #333333; /* Bordure */\n"
-"    border-radius: 10px; \n"
-"    padding: 8px 16px;\n"
-"    font-size: 14px; \n"
-"}\n"
-"\n"
-"/* Changement de style au survol */\n"
-"QPushButton:hover {\n"
-"    background-color: #555555;\n"
-"    border-color: #555555; \n"
-"}\n"
-"\n"
-"/* Changement de style lorsqu'on clique */\n"
-"QPushButton:pressed {\n"
-"    background-color: #222222; /* Couleur de fond lors du clic */\n"
-"    border-color: #222222; /* Bordure lors du clic */\n"
-"    color: #CCCCCC; /* Couleur du texte lors du clic */\n"
-"}\n"
-"")
+        self.widget_8.setGeometry(QRect(10, 10, 571, 41))
         self.widget4 = QWidget(self.widget_8)
         self.widget4.setObjectName(u"widget4")
         self.widget4.setGeometry(QRect(0, 0, 561, 30))
@@ -861,11 +817,11 @@ class Ui_Form(object):
 
         self.horizontalLayout_22.addWidget(self.label_11)
 
-        self.lineEdit_18 = QLineEdit(self.widget4)
-        self.lineEdit_18.setObjectName(u"lineEdit_18")
-        self.lineEdit_18.setMaximumSize(QSize(16777215, 16777215))
-        self.lineEdit_18.setBaseSize(QSize(0, 0))
-        self.lineEdit_18.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
+        self.edit_date_Rapport = QLineEdit(self.widget4)
+        self.edit_date_Rapport.setObjectName(u"edit_date_Rapport")
+        self.edit_date_Rapport.setMaximumSize(QSize(16777215, 16777215))
+        self.edit_date_Rapport.setBaseSize(QSize(0, 0))
+        self.edit_date_Rapport.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
 "QLineEdit {\n"
 "    background-color: transparent; /* Fond transparent */\n"
 "    border: none; /* Pas de bordure par d\u00e9faut */\n"
@@ -885,22 +841,23 @@ class Ui_Form(object):
 "    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */\n"
 "}\n"
 "	")
-        self.lineEdit_18.setReadOnly(False)
+        self.edit_date_Rapport.setReadOnly(False)
 
-        self.horizontalLayout_22.addWidget(self.lineEdit_18)
+        self.horizontalLayout_22.addWidget(self.edit_date_Rapport)
 
         self.widget5 = QWidget(self.RapportMensuel)
         self.widget5.setObjectName(u"widget5")
-        self.widget5.setGeometry(QRect(10, 130, 561, 391))
+        self.widget5.setGeometry(QRect(10, 60, 571, 391))
         self.verticalLayout_6 = QVBoxLayout(self.widget5)
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
         self.verticalLayout_6.setContentsMargins(0, 0, 0, 0)
-        self.textEdit = QTextEdit(self.widget5)
-        self.textEdit.setObjectName(u"textEdit")
+        self.textEdit_Rapport = QTextEdit(self.widget5)
+        self.textEdit_Rapport.setObjectName(u"textEdit_Rapport")
 
-        self.verticalLayout_6.addWidget(self.textEdit)
+        self.verticalLayout_6.addWidget(self.textEdit_Rapport)
 
         self.recherche_matiere_7 = QPushButton(self.widget5)
+        self.recherche_matiere_7.clicked.connect(self.insert_rapport)
         self.recherche_matiere_7.setObjectName(u"recherche_matiere_7")
         self.recherche_matiere_7.setStyleSheet(u"QPushButton {\n"
 "    background-color: #333333; \n"
@@ -932,10 +889,10 @@ class Ui_Form(object):
         self.Rattrapagecours.setObjectName(u"Rattrapagecours")
         self.widget_6 = QWidget(self.Rattrapagecours)
         self.widget_6.setObjectName(u"widget_6")
-        self.widget_6.setGeometry(QRect(20, 30, 581, 211))
+        self.widget_6.setGeometry(QRect(20, 30, 581, 361))
         self.widget6 = QWidget(self.widget_6)
         self.widget6.setObjectName(u"widget6")
-        self.widget6.setGeometry(QRect(0, 10, 581, 185))
+        self.widget6.setGeometry(QRect(0, 10, 581, 221))
         self.verticalLayout_7 = QVBoxLayout(self.widget6)
         self.verticalLayout_7.setObjectName(u"verticalLayout_7")
         self.verticalLayout_7.setContentsMargins(0, 0, 0, 0)
@@ -946,11 +903,11 @@ class Ui_Form(object):
 
         self.horizontalLayout_25.addWidget(self.label_32)
 
-        self.lineEdit_17 = QLineEdit(self.widget6)
-        self.lineEdit_17.setObjectName(u"lineEdit_17")
-        self.lineEdit_17.setMaximumSize(QSize(16777215, 16777215))
-        self.lineEdit_17.setBaseSize(QSize(0, 0))
-        self.lineEdit_17.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
+        self.edit_date_rattrapages = QLineEdit(self.widget6)
+        self.edit_date_rattrapages.setObjectName(u"edit_date_rattrapages")
+        self.edit_date_rattrapages.setMaximumSize(QSize(16777215, 16777215))
+        self.edit_date_rattrapages.setBaseSize(QSize(0, 0))
+        self.edit_date_rattrapages.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
 "QLineEdit {\n"
 "    background-color: transparent; /* Fond transparent */\n"
 "    border: none; /* Pas de bordure par d\u00e9faut */\n"
@@ -971,9 +928,9 @@ class Ui_Form(object):
 "}\n"
 "	\n"
 "")
-        self.lineEdit_17.setReadOnly(False)
+        self.edit_date_rattrapages.setReadOnly(False)
 
-        self.horizontalLayout_25.addWidget(self.lineEdit_17)
+        self.horizontalLayout_25.addWidget(self.edit_date_rattrapages)
 
 
         self.verticalLayout_7.addLayout(self.horizontalLayout_25)
@@ -985,11 +942,11 @@ class Ui_Form(object):
 
         self.horizontalLayout_20.addWidget(self.label_31)
 
-        self.lineEdit_16 = QLineEdit(self.widget6)
-        self.lineEdit_16.setObjectName(u"lineEdit_16")
-        self.lineEdit_16.setMaximumSize(QSize(16777215, 16777215))
-        self.lineEdit_16.setBaseSize(QSize(0, 0))
-        self.lineEdit_16.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
+        self.edit_heure_rattrapages = QLineEdit(self.widget6)
+        self.edit_heure_rattrapages.setObjectName(u"edit_heure_rattrapages")
+        self.edit_heure_rattrapages.setMaximumSize(QSize(16777215, 16777215))
+        self.edit_heure_rattrapages.setBaseSize(QSize(0, 0))
+        self.edit_heure_rattrapages.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
 "QLineEdit {\n"
 "    background-color: transparent; /* Fond transparent */\n"
 "    border: none; /* Pas de bordure par d\u00e9faut */\n"
@@ -1009,9 +966,9 @@ class Ui_Form(object):
 "    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */\n"
 "}\n"
 "	")
-        self.lineEdit_16.setReadOnly(False)
+        self.edit_heure_rattrapages.setReadOnly(False)
 
-        self.horizontalLayout_20.addWidget(self.lineEdit_16)
+        self.horizontalLayout_20.addWidget(self.edit_heure_rattrapages)
 
 
         self.verticalLayout_7.addLayout(self.horizontalLayout_20)
@@ -1023,11 +980,11 @@ class Ui_Form(object):
 
         self.horizontalLayout_18.addWidget(self.label_29)
 
-        self.lineEdit_14 = QLineEdit(self.widget6)
-        self.lineEdit_14.setObjectName(u"lineEdit_14")
-        self.lineEdit_14.setMaximumSize(QSize(16777215, 16777215))
-        self.lineEdit_14.setBaseSize(QSize(0, 0))
-        self.lineEdit_14.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
+        self.edit_NomEnseignant_rattrapages = QLineEdit(self.widget6)
+        self.edit_NomEnseignant_rattrapages.setObjectName(u"edit_NomEnseignant_rattrapages")
+        self.edit_NomEnseignant_rattrapages.setMaximumSize(QSize(16777215, 16777215))
+        self.edit_NomEnseignant_rattrapages.setBaseSize(QSize(0, 0))
+        self.edit_NomEnseignant_rattrapages.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
 "QLineEdit {\n"
 "    background-color: transparent; /* Fond transparent */\n"
 "    border: none; /* Pas de bordure par d\u00e9faut */\n"
@@ -1047,9 +1004,9 @@ class Ui_Form(object):
 "    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */\n"
 "}\n"
 "	")
-        self.lineEdit_14.setReadOnly(False)
+        self.edit_NomEnseignant_rattrapages.setReadOnly(False)
 
-        self.horizontalLayout_18.addWidget(self.lineEdit_14)
+        self.horizontalLayout_18.addWidget(self.edit_NomEnseignant_rattrapages)
 
 
         self.verticalLayout_7.addLayout(self.horizontalLayout_18)
@@ -1061,9 +1018,9 @@ class Ui_Form(object):
 
         self.horizontalLayout_19.addWidget(self.label_30)
 
-        self.lineEdit_15 = QLineEdit(self.widget6)
-        self.lineEdit_15.setObjectName(u"lineEdit_15")
-        self.lineEdit_15.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
+        self.edit_matiere_rattrapages = QLineEdit(self.widget6)
+        self.edit_matiere_rattrapages.setObjectName(u"edit_matiere_rattrapages")
+        self.edit_matiere_rattrapages.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
 "QLineEdit {\n"
 "    background-color: transparent; /* Fond transparent */\n"
 "    border: none; /* Pas de bordure par d\u00e9faut */\n"
@@ -1084,12 +1041,48 @@ class Ui_Form(object):
 "}\n"
 "	")
 
-        self.horizontalLayout_19.addWidget(self.lineEdit_15)
+        self.horizontalLayout_19.addWidget(self.edit_matiere_rattrapages)
 
 
         self.verticalLayout_7.addLayout(self.horizontalLayout_19)
 
+        self.horizontalLayout_26 = QHBoxLayout()
+        self.horizontalLayout_26.setObjectName(u"horizontalLayout_26")
+        self.label_33 = QLabel(self.widget6)
+        self.label_33.setObjectName(u"label_33")
+
+        self.horizontalLayout_26.addWidget(self.label_33)
+
+        self.edit_classe_rattrapages = QLineEdit(self.widget6)
+        self.edit_classe_rattrapages.setObjectName(u"edit_classe_rattrapages")
+        self.edit_classe_rattrapages.setStyleSheet(u"/* Style de base pour le QLineEdit */\n"
+"QLineEdit {\n"
+"    background-color: transparent; /* Fond transparent */\n"
+"    border: none; /* Pas de bordure par d\u00e9faut */\n"
+"    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */\n"
+"    padding: 2px; /* Espacement du texte \u00e0 l'int\u00e9rieur */\n"
+"    font-size: 16px; /* Taille de la police */\n"
+"    color: #333333; /* Couleur du texte */\n"
+"}\n"
+"\n"
+"/* Changement de style au survol */\n"
+"QLineEdit:hover {\n"
+"    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */\n"
+"}\n"
+"\n"
+"/* Changement de style lorsqu'il est actif/focus */\n"
+"QLineEdit:focus {\n"
+"    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */\n"
+"}\n"
+"	")
+
+        self.horizontalLayout_26.addWidget(self.edit_classe_rattrapages)
+
+
+        self.verticalLayout_7.addLayout(self.horizontalLayout_26)
+
         self.btn_rattrapage = QPushButton(self.widget6)
+        self.btn_rattrapage.clicked.connect(self.insert_rattrapages)
         self.btn_rattrapage.setObjectName(u"btn_rattrapage")
         self.btn_rattrapage.setStyleSheet(u"QPushButton {\n"
 "    background-color: #333333; \n"
@@ -1167,7 +1160,7 @@ class Ui_Form(object):
         self.Rattrapages_2.toggled.connect(self.Rattrapages_1.setChecked)
         self.Rattrapages_1.toggled.connect(self.Rattrapages_2.setChecked)
 
-        self.stackedWidget.setCurrentIndex(8)
+        self.stackedWidget.setCurrentIndex(7)
 
 
         QMetaObject.connectSlotsByName(Form)
@@ -1198,30 +1191,29 @@ class Ui_Form(object):
         self.Rattrapages_2.setText(QCoreApplication.translate("Form", u"Rattrapages cours", None))
         self.pushButton_25.setText(QCoreApplication.translate("Form", u"Deconnexion", None))
         self.menu.setText("")
-        self.pushButton_29.setText("")
         self.pushButton_30.setText("")
         self.label_4.setText(QCoreApplication.translate("Form", u"BIENVENU DANS VOTRE PAGE D' ACCUEIL", None))
         self.groupBox_2.setTitle(QCoreApplication.translate("Form", u"Cahier de texte", None))
-        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem = self.table_cahier.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("Form", u"Nom enseignant ", None));
-        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1 = self.table_cahier.horizontalHeaderItem(1)
         ___qtablewidgetitem1.setText(QCoreApplication.translate("Form", u"Plan cours", None));
-        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem2 = self.table_cahier.horizontalHeaderItem(2)
         ___qtablewidgetitem2.setText(QCoreApplication.translate("Form", u"Duree du cours ", None));
-        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem3 = self.table_cahier.horizontalHeaderItem(3)
         ___qtablewidgetitem3.setText(QCoreApplication.translate("Form", u"Date du cours", None));
         self.btn_cahier.setText(QCoreApplication.translate("Form", u"Valider", None))
-        self.label_13.setText(QCoreApplication.translate("Form", u"Renseigner la classe", None))
+        self.label_12.setText(QCoreApplication.translate("Form", u"Renseigner la classe", None))
         self.label_6.setText(QCoreApplication.translate("Form", u"Rensigner la matiere", None))
         self.label_9.setText(QCoreApplication.translate("Form", u"EFFECTIVITE DES ENSEIGNEMENTS", None))
-        self.groupBox_6.setTitle(QCoreApplication.translate("Form", u"conformite", None))
-        ___qtablewidgetitem4 = self.tableWidget_6.horizontalHeaderItem(0)
+        self.groupBox_6.setTitle(QCoreApplication.translate("Form", u"Conformite", None))
+        ___qtablewidgetitem4 = self.table_conformite.horizontalHeaderItem(0)
         ___qtablewidgetitem4.setText(QCoreApplication.translate("Form", u"Nom enseignant ", None));
-        ___qtablewidgetitem5 = self.tableWidget_6.horizontalHeaderItem(1)
+        ___qtablewidgetitem5 = self.table_conformite.horizontalHeaderItem(1)
         ___qtablewidgetitem5.setText(QCoreApplication.translate("Form", u"Duree du cours ", None));
-        ___qtablewidgetitem6 = self.tableWidget_6.horizontalHeaderItem(2)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("Form", u"Plan cours ( cahier de texte)", None));
-        ___qtablewidgetitem7 = self.tableWidget_6.horizontalHeaderItem(3)
+        ___qtablewidgetitem6 = self.table_conformite.horizontalHeaderItem(2)
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("Form", u"Plan cours", None));
+        ___qtablewidgetitem7 = self.table_conformite.horizontalHeaderItem(3)
         ___qtablewidgetitem7.setText(QCoreApplication.translate("Form", u"Syllabus", None));
         self.btn_conformite.setText(QCoreApplication.translate("Form", u"Valider", None))
         self.label_27.setText(QCoreApplication.translate("Form", u"Rensigner la matiere", None))
@@ -1229,20 +1221,20 @@ class Ui_Form(object):
         self.label_8.setText(QCoreApplication.translate("Form", u"DEROULMENT PROGRAMMES", None))
         self.label_10.setText(QCoreApplication.translate("Form", u"FICHES D' EVALUATION", None))
         self.groupBox_3.setTitle(QCoreApplication.translate("Form", u"Avis", None))
-        ___qtablewidgetitem8 = self.tableWidget_3.horizontalHeaderItem(0)
+        ___qtablewidgetitem8 = self.table_avis.horizontalHeaderItem(0)
         ___qtablewidgetitem8.setText(QCoreApplication.translate("Form", u"Matiere", None));
-        ___qtablewidgetitem9 = self.tableWidget_3.horizontalHeaderItem(1)
+        ___qtablewidgetitem9 = self.table_avis.horizontalHeaderItem(1)
         ___qtablewidgetitem9.setText(QCoreApplication.translate("Form", u"Avis", None));
         self.btn_avis.setText(QCoreApplication.translate("Form", u"Valider", None))
         self.label_17.setText(QCoreApplication.translate("Form", u"Renseigner la classe", None))
         self.label_16.setText(QCoreApplication.translate("Form", u"Rensigner la matiere", None))
-        self.btn_date_rapport.setText(QCoreApplication.translate("Form", u"Valider", None))
         self.label_11.setText(QCoreApplication.translate("Form", u"Rensigner la date de redaction du rapport", None))
         self.recherche_matiere_7.setText(QCoreApplication.translate("Form", u"Envoyer le rapport mensuel", None))
         self.label_32.setText(QCoreApplication.translate("Form", u"Rensigner la nouvelle date du cours", None))
-        self.label_31.setText(QCoreApplication.translate("Form", u"Rensigner La nouvelle date du cours", None))
+        self.label_31.setText(QCoreApplication.translate("Form", u"Rensigner La nouvelle heure du cours", None))
         self.label_29.setText(QCoreApplication.translate("Form", u"Renseigner le nom du prof", None))
         self.label_30.setText(QCoreApplication.translate("Form", u"Reinsgeigner la matiere", None))
+        self.label_33.setText(QCoreApplication.translate("Form", u"Reinsgeigner la classe", None))
         self.btn_rattrapage.setText(QCoreApplication.translate("Form", u"Valider", None))
         self.label.setText("")
     # retranslateUi

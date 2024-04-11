@@ -1,0 +1,7 @@
+A ajouter 
+    self.btn_cahier = QPushButton(self.widget)
+    self.btn_cahier.clicked.connect(self.search_cahier)
+
+faire la meme chose pour les autres bouttons
+
+faire la meme chose pour les autres 
