@@ -70,20 +70,19 @@ class MySideBar(QMainWindow,Ui_Form):
 
     def search_cahier(self):
         classe = self.edit_classe_cahier.text()
-        matiere = self.edit_matiere_cahier.text()
-
+    
         try:
             connection = mysql.connector.connect(
                 host="localhost",
                 user="projet_sgbd",
                 passwd="passer",
-                database="ecole" 
+                database="eduops" 
             )
 
             cursor = connection.cursor()
 
-            query = "SELECT * FROM cahier WHERE classe = %s AND matiere= %s"
-            cursor.execute(query, (classe, matiere))
+            query = "SELECT * FROM coursdanscahierdetexte WHERE idCahierDeTexte IN (SELECT id FROM cahierdetexte WHERE idClasse = %s)"
+            cursor.execute(query, (classe,))  # Encapsuler la variable dans un tuple
 
             rows = cursor.fetchall()
 
@@ -91,6 +90,35 @@ class MySideBar(QMainWindow,Ui_Form):
             for i, row in enumerate(rows):
                 for j, value in enumerate(row):
                     self.table_cahier.setItem(i, j, QTableWidgetItem(str(value)))
+
+            cursor.close()
+            connection.close()
+
+        except mysql.connector.Error as error:
+            print("Erreur lors de la connexion à la base de données:", error)
+
+    def search_avis(self):
+        matiere = self.edit_matiere_avis.text()
+
+        try:
+            connection = mysql.connector.connect(
+                host="localhost",
+                user="projet_sgbd",
+                passwd="passer",
+                database="eduops" 
+            )
+
+            cursor = connection.cursor()
+
+            query = "SELECT * FROM avis WHERE selectedCourse = %s "
+            cursor.execute(query, (matiere,))  
+
+            rows = cursor.fetchall()
+
+            self.table_cahier.setRowCount(len(rows))
+            for i, row in enumerate(rows):
+                for j, value in enumerate(row):
+                    self.table_avis.setItem(i, j, QTableWidgetItem(str(value)))
 
             cursor.close()
             connection.close()
@@ -131,40 +159,36 @@ class MySideBar(QMainWindow,Ui_Form):
         except mysql.connector.Error as error:
             print("Erreur lors de la connexion à la base de données:", error)
 
-    """
-        Ici apres la BDD qu'on a fera je dois modifier la requete sql
-    """
-    def search_avis(self):
-        classe = self.edit_classe_avis.text()
-        matiere = self.edit_matiere_avis.text()
+        def search_avis(self):
+            matiere = self.edit_matiere_avis.text()
 
-        try:
-            connection = mysql.connector.connect(
-                host="localhost",
-                user="projet_sgbd",
-                passwd="passer",
-                database="ecole" 
-            )
+            try:
+                connection = mysql.connector.connect(
+                    host="localhost",
+                    user="projet_sgbd",
+                    passwd="passer",
+                    database="ecole" 
+                )
 
-            cursor = connection.cursor()
+                cursor = connection.cursor()
 
-            query = "SELECT * FROM cahier WHERE classe = %s AND matiere= %s"
-            cursor.execute(query, (classe, matiere))
+                query = "SELECT * FROM avis WHERE selectedCourse = %s "
+                cursor.execute(query, (matiere,))  # Encapsuler la variable dans un tuple
 
-            rows = cursor.fetchall()
+                rows = cursor.fetchall()
 
-            self.table_cahier.setRowCount(len(rows))
-            for i, row in enumerate(rows):
-                for j, value in enumerate(row):
-                    self.table_avis.setItem(i, j, QTableWidgetItem(str(value)))
+                self.table_cahier.setRowCount(len(rows))
+                for i, row in enumerate(rows):
+                    for j, value in enumerate(row):
+                        self.table_avis.setItem(i, j, QTableWidgetItem(str(value)))
 
-            cursor.close()
-            connection.close()
+                cursor.close()
+                connection.close()
 
-        except mysql.connector.Error as error:
-            print("Erreur lors de la connexion à la base de données:", error)
+            except mysql.connector.Error as error:
+                print("Erreur lors de la connexion à la base de données:", error)
 
-    
+        
     def insert_rattrapages(self):
         date = self.edit_date_rattrapages.text()
         heure = self.edit_heure_rattrapages.text() 
@@ -222,3 +246,33 @@ class MySideBar(QMainWindow,Ui_Form):
 
         except mysql.connector.Error as error:
             print("Erreur lors de l'insertion de données dans la table rapport:", error)
+
+
+def search_fiche(self):
+        classe = self.edit_classe_cahier.text()
+        
+        try:
+            connection = mysql.connector.connect(
+                host="localhost",
+                user="projet_sgbd",
+                passwd="passer",
+                database="eduops" 
+            )
+
+            cursor = connection.cursor()
+
+            query = "SELECT * FROM coursdanscahierdetexte WHERE idCahierDeTexte IN (SELECT id FROM cahierdetexte WHERE idClasse = %s)"
+            cursor.execute(query, (classe))
+
+            rows = cursor.fetchall()
+
+            self.table_cahier.setRowCount(len(rows))
+            for i, row in enumerate(rows):
+                for j, value in enumerate(row):
+                    self.table_cahier.setItem(i, j, QTableWidgetItem(str(value)))
+
+            cursor.close()
+            connection.close()
+
+        except mysql.connector.Error as error:
+            print("Erreur lors de la connexion à la base de données:", error)
