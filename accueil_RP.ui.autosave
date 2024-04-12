@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>988</width>
+    <width>1593</width>
     <height>763</height>
    </rect>
   </property>
@@ -16,20 +16,23 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout_2">
-   <item row="0" column="0">
-    <layout class="QHBoxLayout" name="horizontalLayout_17"/>
-   </item>
-   <item row="1" column="1">
-    <widget class="QWidget" name="icon_only_widget" native="true">
-     <property name="maximumSize">
-      <size>
-       <width>60</width>
-       <height>16777215</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QWidget{
+  <widget class="QWidget" name="icon_only_widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>17</x>
+     <y>17</y>
+     <width>38</width>
+     <height>661</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>60</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget{
 	background-color: rgb(73, 144, 196);
 }
 
@@ -45,231 +48,84 @@ QPushButton:checked{
 	color: #1F95EF;
 	font-weight:bold;
 }</string>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_3">
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <property name="spacing">
+     <number>15</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
       <property name="spacing">
        <number>15</number>
       </property>
-      <property name="leftMargin">
-       <number>0</number>
-      </property>
       <property name="topMargin">
-       <number>0</number>
-      </property>
-      <property name="rightMargin">
-       <number>0</number>
+       <number>15</number>
       </property>
       <item>
-       <layout class="QVBoxLayout" name="verticalLayout_2">
-        <property name="spacing">
-         <number>15</number>
+       <widget class="QLabel" name="label">
+        <property name="styleSheet">
+         <string notr="true">image: url(:/logo pers.jpeg);</string>
         </property>
-        <property name="topMargin">
-         <number>15</number>
+        <property name="text">
+         <string/>
         </property>
-        <item>
-         <widget class="QPushButton" name="Accueil_1">
-          <property name="styleSheet">
-           <string notr="true">QPushButton:checked{
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Accueil_1">
+        <property name="styleSheet">
+         <string notr="true">QPushButton:checked{
 	background-color: #F5FAFE;
 	color: #1F95EF;
 	font-weight:bold;
 }</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>Images/page-accueil.png</normaloff>Images/page-accueil.png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="Cahier_1">
-          <property name="styleSheet">
-           <string notr="true">text-align:center;</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>Images/cahier-de-texte.png</normaloff>Images/cahier-de-texte.png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="Effectivite_1">
-          <property name="styleSheet">
-           <string notr="true">text-align:center;
-</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>Images/enseignement.png</normaloff>Images/enseignement.png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="Conformite_1">
-          <property name="styleSheet">
-           <string notr="true">text-align:center;</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>Images/conformite.png</normaloff>Images/conformite.png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="Deroulement_1">
-          <property name="styleSheet">
-           <string notr="true">text-align:center;</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>Images/verifier.png</normaloff>Images/verifier.png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="Fiches_1">
-          <property name="styleSheet">
-           <string notr="true">text-align:center;</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>Images/bonne-note.png</normaloff>Images/bonne-note.png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="Avis_1">
-          <property name="styleSheet">
-           <string notr="true">text-align:center;</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>Images/avis-client.png</normaloff>Images/avis-client.png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="Rapport_1">
-          <property name="styleSheet">
-           <string notr="true">text-align:center;
-</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>Images/rapport-dactivite.png</normaloff>Images/rapport-dactivite.png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="Rattrapages_1">
-          <property name="styleSheet">
-           <string notr="true">text-align:center;</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>Images/calendrier.png</normaloff>Images/calendrier.png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-       </layout>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/page-accueil.png</normaloff>Images/page-accueil.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
       </item>
       <item>
-       <spacer name="verticalSpacer">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
+       <widget class="QPushButton" name="Cahier_1">
+        <property name="styleSheet">
+         <string notr="true">text-align:center;</string>
         </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>38</width>
-          <height>68</height>
-         </size>
+        <property name="text">
+         <string/>
         </property>
-       </spacer>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/cahier-de-texte.png</normaloff>Images/cahier-de-texte.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_9">
+       <widget class="QPushButton" name="Effectivite_1">
         <property name="styleSheet">
          <string notr="true">text-align:center;
 </string>
@@ -279,26 +135,169 @@ QPushButton:checked{
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>Images/sortir.png</normaloff>Images/sortir.png</iconset>
+          <normaloff>Images/enseignement.png</normaloff>Images/enseignement.png</iconset>
         </property>
         <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Conformite_1">
+        <property name="styleSheet">
+         <string notr="true">text-align:center;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/conformite.png</normaloff>Images/conformite.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Fiches_1">
+        <property name="styleSheet">
+         <string notr="true">text-align:center;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/bonne-note.png</normaloff>Images/bonne-note.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Avis_1">
+        <property name="styleSheet">
+         <string notr="true">text-align:center;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/avis-client.png</normaloff>Images/avis-client.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Rapport_1">
+        <property name="styleSheet">
+         <string notr="true">text-align:center;
+</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/rapport-dactivite.png</normaloff>Images/rapport-dactivite.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Rattrapages_1">
+        <property name="styleSheet">
+         <string notr="true">text-align:center;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/calendrier.png</normaloff>Images/calendrier.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
          <bool>true</bool>
         </property>
        </widget>
       </item>
      </layout>
-    </widget>
-   </item>
-   <item row="1" column="2">
-    <widget class="QWidget" name="icon_name_widget" native="true">
-     <property name="maximumSize">
-      <size>
-       <width>200</width>
-       <height>16777215</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QWidget{
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>38</width>
+        <height>68</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_9">
+      <property name="styleSheet">
+       <string notr="true">text-align:center;
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>Images/sortir.png</normaloff>Images/sortir.png</iconset>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="icon_name_widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>61</x>
+     <y>17</y>
+     <width>187</width>
+     <height>658</height>
+    </rect>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>200</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget{
 	background-color: rgb(73, 144, 196);
 }
 
@@ -319,505 +318,408 @@ QPushButton:checked{
 	color: #1F95EF;
 	font-weight:bold;
 }</string>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout_4">
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_4">
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
       <property name="rightMargin">
-       <number>0</number>
+       <number>20</number>
       </property>
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_3">
-        <property name="rightMargin">
-         <number>20</number>
+       <widget class="QLabel" name="label_2">
+        <property name="styleSheet">
+         <string notr="true">image: url(:/logo pers.jpeg);</string>
         </property>
-        <item>
-         <widget class="QLabel" name="label_2">
-          <property name="styleSheet">
-           <string notr="true">image: url(:/logo pers.jpeg);</string>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_3">
-          <property name="text">
-           <string> RP</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QVBoxLayout" name="verticalLayout">
-        <property name="spacing">
-         <number>15</number>
-        </property>
-        <property name="topMargin">
-         <number>15</number>
-        </property>
-        <item>
-         <widget class="QPushButton" name="Accueil_2">
-          <property name="text">
-           <string>Accueil</string>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>Images/page-accueil.png</normaloff>Images/page-accueil.png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="Cahier_2">
-          <property name="text">
-           <string>Cahier de texte</string>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>Images/cahier-de-texte.png</normaloff>Images/cahier-de-texte.png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="Effectivite_2">
-          <property name="text">
-           <string>Effectivité enseignements</string>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>Images/enseignement.png</normaloff>Images/enseignement.png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="Conformite_2">
-          <property name="text">
-           <string>Conformité cours</string>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>Images/conformite.png</normaloff>Images/conformite.png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="Deroulement_2">
-          <property name="text">
-           <string>Déroulement programme</string>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>Images/verifier.png</normaloff>Images/verifier.png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="Fiches_2">
-          <property name="text">
-           <string>Fiches d'evaluations</string>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>Images/bonne-note.png</normaloff>Images/bonne-note.png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="Avis_2">
-          <property name="text">
-           <string>Avis etudiants</string>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>Images/avis-client.png</normaloff>Images/avis-client.png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="Rapport_2">
-          <property name="text">
-           <string>Rapport mensuel</string>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>Images/rapport-dactivite.png</normaloff>Images/rapport-dactivite.png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="Rattrapages_2">
-          <property name="text">
-           <string>Rattrapages cours</string>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normaloff>Images/calendrier.png</normaloff>Images/calendrier.png</iconset>
-          </property>
-          <property name="checkable">
-           <bool>true</bool>
-          </property>
-          <property name="autoExclusive">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <spacer name="verticalSpacer_2">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>18</width>
-          <height>168</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_25">
         <property name="text">
-         <string>Deconnexion</string>
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string> RP</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>15</number>
+      </property>
+      <property name="topMargin">
+       <number>15</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="Accueil_2">
+        <property name="text">
+         <string>Accueil</string>
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>Images/sortir.png</normaloff>Images/sortir.png</iconset>
+          <normaloff>Images/page-accueil.png</normaloff>Images/page-accueil.png</iconset>
         </property>
         <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Cahier_2">
+        <property name="text">
+         <string>Cahier de texte</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/cahier-de-texte.png</normaloff>Images/cahier-de-texte.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Effectivite_2">
+        <property name="text">
+         <string>Effectivité enseignements</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/enseignement.png</normaloff>Images/enseignement.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Conformite_2">
+        <property name="text">
+         <string>Conformité cours</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/conformite.png</normaloff>Images/conformite.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Fiches_2">
+        <property name="text">
+         <string>Fiches d'evaluations</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/bonne-note.png</normaloff>Images/bonne-note.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Avis_2">
+        <property name="text">
+         <string>Avis etudiants</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/avis-client.png</normaloff>Images/avis-client.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Rapport_2">
+        <property name="text">
+         <string>Rapport mensuel</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/rapport-dactivite.png</normaloff>Images/rapport-dactivite.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Rattrapages_2">
+        <property name="text">
+         <string>Rattrapages cours</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>Images/calendrier.png</normaloff>Images/calendrier.png</iconset>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="autoExclusive">
          <bool>true</bool>
         </property>
        </widget>
       </item>
      </layout>
-    </widget>
-   </item>
-   <item row="1" column="3">
-    <widget class="QWidget" name="main_menu" native="true">
-     <layout class="QVBoxLayout" name="verticalLayout_5">
-      <item>
-       <widget class="QWidget" name="header" native="true">
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_5">
-         <item>
-          <widget class="QPushButton" name="menu">
-           <property name="styleSheet">
-            <string notr="true">border: none;
+    </item>
+    <item>
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>18</width>
+        <height>168</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_25">
+      <property name="text">
+       <string>Deconnexion</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>Images/sortir.png</normaloff>Images/sortir.png</iconset>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="main_menu" native="true">
+   <property name="geometry">
+    <rect>
+     <x>234</x>
+     <y>17</y>
+     <width>1361</width>
+     <height>721</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_5">
+    <item>
+     <widget class="QWidget" name="header" native="true">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QPushButton" name="menu">
+         <property name="styleSheet">
+          <string notr="true">border: none;
 </string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="icon">
-            <iconset>
-             <normaloff>Images/barre-de-menu.png</normaloff>Images/barre-de-menu.png</iconset>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>30</width>
-             <height>30</height>
-            </size>
-           </property>
-           <property name="checkable">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>247</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer_2">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>246</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pushButton_30">
-           <property name="styleSheet">
-            <string notr="true">border: none;
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>Images/barre-de-menu.png</normaloff>Images/barre-de-menu.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>247</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>246</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_30">
+         <property name="styleSheet">
+          <string notr="true">border: none;
 
 </string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="icon">
-            <iconset>
-             <normaloff>Images/profil.png</normaloff>Images/profil.png</iconset>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>30</width>
-             <height>20</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-        </layout>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>Images/profil.png</normaloff>Images/profil.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>20</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="currentIndex">
+       <number>3</number>
+      </property>
+      <widget class="QWidget" name="Accueil">
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>100</y>
+          <width>541</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>MS Gothic</family>
+          <pointsize>20</pointsize>
+          <italic>true</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>BIENVENU DANS VOTRE PAGE D' ACCUEIL</string>
+        </property>
        </widget>
-      </item>
-      <item>
-       <widget class="QStackedWidget" name="stackedWidget">
+      </widget>
+      <widget class="QWidget" name="Cahierdetexte">
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>110</y>
+          <width>721</width>
+          <height>471</height>
+         </rect>
+        </property>
         <property name="styleSheet">
          <string notr="true">background-color: rgb(255, 255, 255);</string>
         </property>
-        <property name="currentIndex">
-         <number>6</number>
+        <property name="title">
+         <string>Cahier de texte</string>
         </property>
-        <widget class="QWidget" name="Accueil">
-         <widget class="QLabel" name="label_4">
-          <property name="geometry">
-           <rect>
-            <x>50</x>
-            <y>100</y>
-            <width>541</width>
-            <height>41</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>MS Gothic</family>
-            <pointsize>20</pointsize>
-            <italic>true</italic>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>BIENVENU DANS VOTRE PAGE D' ACCUEIL</string>
-          </property>
-         </widget>
-        </widget>
-        <widget class="QWidget" name="Cahierdetexte">
-         <widget class="QGroupBox" name="groupBox_2">
-          <property name="geometry">
-           <rect>
-            <x>-20</x>
-            <y>160</y>
-            <width>721</width>
-            <height>461</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="title">
-           <string>Cahier de texte</string>
-          </property>
-          <layout class="QGridLayout" name="gridLayout">
-           <item row="0" column="0">
-            <widget class="QTableWidget" name="table_cahier">
-             <property name="styleSheet">
-              <string notr="true">border: 1px solid #c6c6c6;
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QTableWidget" name="table_cahier">
+           <property name="styleSheet">
+            <string notr="true">border: 1px solid #c6c6c6;
 border-radius: 5px;</string>
+           </property>
+           <attribute name="horizontalHeaderCascadingSectionResizes">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>132</number>
+           </attribute>
+           <attribute name="horizontalHeaderStretchLastSection">
+            <bool>true</bool>
+           </attribute>
+           <column>
+            <property name="text">
+             <string>Nom enseignant </string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Plan cours</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Date du cours</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Heure debut cours</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Heure fin cours</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout_16">
+           <item>
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>Laisser un commataire</string>
              </property>
-             <attribute name="horizontalHeaderCascadingSectionResizes">
-              <bool>false</bool>
-             </attribute>
-             <attribute name="horizontalHeaderDefaultSectionSize">
-              <number>132</number>
-             </attribute>
-             <attribute name="horizontalHeaderStretchLastSection">
-              <bool>true</bool>
-             </attribute>
-             <column>
-              <property name="text">
-               <string>Nom enseignant </string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Plan cours</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Date du cours</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Heure debut cours</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Heure fin cours</string>
-              </property>
-             </column>
             </widget>
            </item>
-           <item row="1" column="0">
-            <layout class="QVBoxLayout" name="verticalLayout_16">
-             <item>
-              <widget class="QLabel" name="label_5">
-               <property name="text">
-                <string>Laisser un commataire</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QTextEdit" name="textEdit"/>
-             </item>
-             <item>
-              <widget class="QPushButton" name="btn_commentair_cahier">
-               <property name="styleSheet">
-                <string notr="true">QPushButton {
-    background-color: #333333; 
-    color: #FFFFFF; 
-    border: 2px solid #333333; /* Bordure */
-    border-radius: 10px; 
-    padding: 8px 16px;
-    font-size: 14px; 
-}
-
-/* Changement de style au survol */
-QPushButton:hover {
-    background-color: #555555;
-    border-color: #555555; 
-}
-
-/* Changement de style lorsqu'on clique */
-QPushButton:pressed {
-    background-color: #222222; /* Couleur de fond lors du clic */
-    border-color: #222222; /* Bordure lors du clic */
-    color: #CCCCCC; /* Couleur du texte lors du clic */
-}
-</string>
-               </property>
-               <property name="text">
-                <string>Valider</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QWidget" name="widget" native="true">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>10</y>
-            <width>681</width>
-            <height>121</height>
-           </rect>
-          </property>
-          <layout class="QVBoxLayout" name="verticalLayout_18">
            <item>
-            <layout class="QVBoxLayout" name="verticalLayout_9">
-             <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_7">
-               <item>
-                <widget class="QLabel" name="label_12">
-                 <property name="text">
-                  <string>Renseigner l'id de la classe </string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="edit_classe_cahier">
-                 <property name="styleSheet">
-                  <string notr="true">/* Style de base pour le QLineEdit */
-QLineEdit {
-    background-color: transparent; /* Fond transparent */
-    border: none; /* Pas de bordure par défaut */
-    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */
-    padding: 2px; /* Espacement du texte à l'intérieur */
-    font-size: 16px; /* Taille de la police */
-    color: #333333; /* Couleur du texte */
-}
-
-/* Changement de style au survol */
-QLineEdit:hover {
-    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */
-}
-
-/* Changement de style lorsqu'il est actif/focus */
-QLineEdit:focus {
-    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */
-}
-</string>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </item>
-            </layout>
+            <widget class="QTextEdit" name="commentaire_cahier"/>
            </item>
            <item>
-            <widget class="QPushButton" name="btn_cahier">
+            <widget class="QPushButton" name="btn_commentaire_cahier">
              <property name="styleSheet">
               <string notr="true">QPushButton {
     background-color: #333333; 
@@ -848,44 +750,860 @@ QPushButton:pressed {
             </widget>
            </item>
           </layout>
-         </widget>
-        </widget>
-        <widget class="QWidget" name="Effectivite">
-         <widget class="QWidget" name="layoutWidget_3">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>0</y>
-            <width>681</width>
-            <height>71</height>
-           </rect>
-          </property>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="widget" native="true">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>721</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_18">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_9">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_7">
+             <item>
+              <widget class="QLabel" name="label_12">
+               <property name="text">
+                <string>Renseigner l'id de la classe </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="edit_classe_cahier">
+               <property name="styleSheet">
+                <string notr="true">/* Style de base pour le QLineEdit */
+QLineEdit {
+    background-color: transparent; /* Fond transparent */
+    border: none; /* Pas de bordure par défaut */
+    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */
+    padding: 2px; /* Espacement du texte à l'intérieur */
+    font-size: 16px; /* Taille de la police */
+    color: #333333; /* Couleur du texte */
+}
+
+/* Changement de style au survol */
+QLineEdit:hover {
+    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */
+}
+
+/* Changement de style lorsqu'il est actif/focus */
+QLineEdit:focus {
+    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */
+}
+</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_cahier">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    background-color: #333333; 
+    color: #FFFFFF; 
+    border: 2px solid #333333; /* Bordure */
+    border-radius: 10px; 
+    padding: 8px 16px;
+    font-size: 14px; 
+}
+
+/* Changement de style au survol */
+QPushButton:hover {
+    background-color: #555555;
+    border-color: #555555; 
+}
+
+/* Changement de style lorsqu'on clique */
+QPushButton:pressed {
+    background-color: #222222; /* Couleur de fond lors du clic */
+    border-color: #222222; /* Bordure lors du clic */
+    color: #CCCCCC; /* Couleur du texte lors du clic */
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Valider</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Effectivite">
+       <widget class="QGroupBox" name="groupBox_5">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>110</y>
+          <width>721</width>
+          <height>471</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="title">
+         <string>Cahier de texte</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QTableWidget" name="table_cahier_2">
+           <property name="styleSheet">
+            <string notr="true">border: 1px solid #c6c6c6;
+border-radius: 5px;</string>
+           </property>
+           <attribute name="horizontalHeaderCascadingSectionResizes">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>132</number>
+           </attribute>
+           <attribute name="horizontalHeaderStretchLastSection">
+            <bool>true</bool>
+           </attribute>
+           <column>
+            <property name="text">
+             <string>Nom enseignant </string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Date du cours</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Heure debut cours</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Heure fin cours</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="widget_4" native="true">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>721</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_22">
+         <item>
           <layout class="QVBoxLayout" name="verticalLayout_14">
            <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_30">
+            <layout class="QHBoxLayout" name="horizontalLayout_8">
              <item>
-              <widget class="QLabel" name="label_18">
+              <widget class="QLabel" name="label_14">
+               <property name="text">
+                <string>Renseigner l'id de la classe </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="edit_classe_effectivite">
+               <property name="styleSheet">
+                <string notr="true">/* Style de base pour le QLineEdit */
+QLineEdit {
+    background-color: transparent; /* Fond transparent */
+    border: none; /* Pas de bordure par défaut */
+    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */
+    padding: 2px; /* Espacement du texte à l'intérieur */
+    font-size: 16px; /* Taille de la police */
+    color: #333333; /* Couleur du texte */
+}
+
+/* Changement de style au survol */
+QLineEdit:hover {
+    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */
+}
+
+/* Changement de style lorsqu'il est actif/focus */
+QLineEdit:focus {
+    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */
+}
+</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_cahier_2">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    background-color: #333333; 
+    color: #FFFFFF; 
+    border: 2px solid #333333; /* Bordure */
+    border-radius: 10px; 
+    padding: 8px 16px;
+    font-size: 14px; 
+}
+
+/* Changement de style au survol */
+QPushButton:hover {
+    background-color: #555555;
+    border-color: #555555; 
+}
+
+/* Changement de style lorsqu'on clique */
+QPushButton:pressed {
+    background-color: #222222; /* Couleur de fond lors du clic */
+    border-color: #222222; /* Bordure lors du clic */
+    color: #CCCCCC; /* Couleur du texte lors du clic */
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Valider</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Conformite">
+       <widget class="QGroupBox" name="groupBox_6">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>150</y>
+          <width>881</width>
+          <height>441</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="title">
+         <string>Conformite</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_6">
+         <item row="0" column="0">
+          <widget class="QTableWidget" name="table_conformite">
+           <property name="styleSheet">
+            <string notr="true">border: 1px solid #c6c6c6;
+border-radius: 5px;</string>
+           </property>
+           <attribute name="horizontalHeaderCascadingSectionResizes">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>132</number>
+           </attribute>
+           <attribute name="horizontalHeaderStretchLastSection">
+            <bool>true</bool>
+           </attribute>
+           <column>
+            <property name="text">
+             <string>Nom enseignant </string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Nom cours</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Nombre heures</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Objectif contenu</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Evaluation</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Contenu dans cahier</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <layout class="QVBoxLayout" name="verticalLayout_17">
+           <item>
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>Laisser un commataire</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTextEdit" name="commentaire_conformite"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_commentaire_conformite">
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    background-color: #333333; 
+    color: #FFFFFF; 
+    border: 2px solid #333333; /* Bordure */
+    border-radius: 10px; 
+    padding: 8px 16px;
+    font-size: 14px; 
+}
+
+/* Changement de style au survol */
+QPushButton:hover {
+    background-color: #555555;
+    border-color: #555555; 
+}
+
+/* Changement de style lorsqu'on clique */
+QPushButton:pressed {
+    background-color: #222222; /* Couleur de fond lors du clic */
+    border-color: #222222; /* Bordure lors du clic */
+    color: #CCCCCC; /* Couleur du texte lors du clic */
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Valider</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="widget_5" native="true">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>701</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_19">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_10">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_16">
+             <item>
+              <widget class="QLabel" name="label_27">
+               <property name="text">
+                <string>Rensigner la matiere</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="edit_matiere_conformite">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="baseSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">/* Style de base pour le QLineEdit */
+QLineEdit {
+    background-color: transparent; /* Fond transparent */
+    border: none; /* Pas de bordure par défaut */
+    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */
+    padding: 2px; /* Espacement du texte à l'intérieur */
+    font-size: 16px; /* Taille de la police */
+    color: #333333; /* Couleur du texte */
+}
+
+/* Changement de style au survol */
+QLineEdit:hover {
+    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */
+}
+
+/* Changement de style lorsqu'il est actif/focus */
+QLineEdit:focus {
+    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */
+}
+
+</string>
+               </property>
+               <property name="readOnly">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_24">
+             <item>
+              <widget class="QLabel" name="label_28">
+               <property name="text">
+                <string>Renseigner le nom de l'enseignant</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="edit_nomEnseignant_conformite">
+               <property name="styleSheet">
+                <string notr="true">/* Style de base pour le QLineEdit */
+QLineEdit {
+    background-color: transparent; /* Fond transparent */
+    border: none; /* Pas de bordure par défaut */
+    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */
+    padding: 2px; /* Espacement du texte à l'intérieur */
+    font-size: 16px; /* Taille de la police */
+    color: #333333; /* Couleur du texte */
+}
+
+/* Changement de style au survol */
+QLineEdit:hover {
+    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */
+}
+
+/* Changement de style lorsqu'il est actif/focus */
+QLineEdit:focus {
+    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */
+}
+</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_conformite">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    background-color: #333333; 
+    color: #FFFFFF; 
+    border: 2px solid #333333; /* Bordure */
+    border-radius: 10px; 
+    padding: 8px 16px;
+    font-size: 14px; 
+}
+
+/* Changement de style au survol */
+QPushButton:hover {
+    background-color: #555555;
+    border-color: #555555; 
+}
+
+/* Changement de style lorsqu'on clique */
+QPushButton:pressed {
+    background-color: #222222; /* Couleur de fond lors du clic */
+    border-color: #222222; /* Bordure lors du clic */
+    color: #CCCCCC; /* Couleur du texte lors du clic */
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Valider</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="FichesEvaluation">
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>150</y>
+          <width>701</width>
+          <height>281</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="title">
+         <string>FIches d'evaluation</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="1" column="0">
+          <widget class="QTableWidget" name="table_evaluation">
+           <property name="styleSheet">
+            <string notr="true">border: 1px solid #c6c6c6;
+border-radius: 5px;</string>
+           </property>
+           <attribute name="horizontalHeaderCascadingSectionResizes">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>132</number>
+           </attribute>
+           <attribute name="horizontalHeaderStretchLastSection">
+            <bool>true</bool>
+           </attribute>
+           <column>
+            <property name="text">
+             <string>Nom Etudiant</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Matiere</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Note</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="widget_3" native="true">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>701</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_20">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QLabel" name="label_20">
+             <property name="text">
+              <string>Renseigner la classe</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="edit_classe_evaluation">
+             <property name="styleSheet">
+              <string notr="true">/* Style de base pour le QLineEdit */
+QLineEdit {
+    background-color: transparent; /* Fond transparent */
+    border: none; /* Pas de bordure par défaut */
+    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */
+    padding: 2px; /* Espacement du texte à l'intérieur */
+    font-size: 16px; /* Taille de la police */
+    color: #333333; /* Couleur du texte */
+}
+
+/* Changement de style au survol */
+QLineEdit:hover {
+    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */
+}
+
+/* Changement de style lorsqu'il est actif/focus */
+QLineEdit:focus {
+    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */
+}
+</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_evaluation">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    background-color: #333333; 
+    color: #FFFFFF; 
+    border: 2px solid #333333; /* Bordure */
+    border-radius: 10px; 
+    padding: 8px 16px;
+    font-size: 14px; 
+}
+
+/* Changement de style au survol */
+QPushButton:hover {
+    background-color: #555555;
+    border-color: #555555; 
+}
+
+/* Changement de style lorsqu'on clique */
+QPushButton:pressed {
+    background-color: #222222; /* Couleur de fond lors du clic */
+    border-color: #222222; /* Bordure lors du clic */
+    color: #CCCCCC; /* Couleur du texte lors du clic */
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Valider</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="AvisEtudiants">
+       <widget class="QGroupBox" name="groupBox_3">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>190</y>
+          <width>1341</width>
+          <height>281</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="title">
+         <string>Avis</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="1" column="0">
+          <widget class="QTableWidget" name="table_avis">
+           <property name="styleSheet">
+            <string notr="true">border: 1px solid #c6c6c6;
+border-radius: 5px;</string>
+           </property>
+           <attribute name="horizontalHeaderCascadingSectionResizes">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>132</number>
+           </attribute>
+           <attribute name="horizontalHeaderStretchLastSection">
+            <bool>true</bool>
+           </attribute>
+           <column>
+            <property name="text">
+             <string>Matiere</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>cours</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Syllabus</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>objectifs clairs</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>contenu</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>contenu respecte</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>schedule respecter</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>satisfactions</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>suggestions</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>descriptions</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="widget_2" native="true">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>701</width>
+          <height>151</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_12">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_10">
+             <item>
+              <widget class="QLabel" name="label_16">
+               <property name="text">
+                <string>Rensigner la matiere</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="edit_matiere_avis">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="baseSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">/* Style de base pour le QLineEdit */
+QLineEdit {
+    background-color: transparent; /* Fond transparent */
+    border: none; /* Pas de bordure par défaut */
+    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */
+    padding: 2px; /* Espacement du texte à l'intérieur */
+    font-size: 16px; /* Taille de la police */
+    color: #333333; /* Couleur du texte */
+}
+
+/* Changement de style au survol */
+QLineEdit:hover {
+    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */
+}
+
+/* Changement de style lorsqu'il est actif/focus */
+QLineEdit:focus {
+    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */
+}
+</string>
+               </property>
+               <property name="readOnly">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_avis">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    background-color: #333333; 
+    color: #FFFFFF; 
+    border: 2px solid #333333; /* Bordure */
+    border-radius: 10px; 
+    padding: 8px 16px;
+    font-size: 14px; 
+}
+
+/* Changement de style au survol */
+QPushButton:hover {
+    background-color: #555555;
+    border-color: #555555; 
+}
+
+/* Changement de style lorsqu'on clique */
+QPushButton:pressed {
+    background-color: #222222; /* Couleur de fond lors du clic */
+    border-color: #222222; /* Bordure lors du clic */
+    color: #CCCCCC; /* Couleur du texte lors du clic */
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Valider</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="RapportMensuel">
+       <widget class="QWidget" name="widget_8" native="true">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>701</width>
+          <height>78</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_13">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_11">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_22">
+             <item>
+              <widget class="QLabel" name="label_11">
                <property name="text">
                 <string>Rensigner la date de redaction du rapport</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QDateEdit" name="dateEdit_3"/>
+              <widget class="QDateEdit" name="edit_date_Rapport_3">
+               <property name="styleSheet">
+                <string notr="true">QDateEdit {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #f8f8f8;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+QDateEdit::drop-down {
+    width: 20px;
+    border-left: 2px solid #ccc;
+    border-radius: 0;
+    background-color: #f8f8f8;
+    image: url(drop_down_icon.png);
+}
+</string>
+               </property>
+              </widget>
              </item>
             </layout>
            </item>
            <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_31">
+            <layout class="QHBoxLayout" name="horizontalLayout_27">
              <item>
-              <widget class="QLabel" name="label_19">
+              <widget class="QLabel" name="label_13">
                <property name="text">
                 <string>Rensigner le nom du  rapport</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="edit_date_Rapport_4">
+              <widget class="QLineEdit" name="edit_nom_Rapport">
                <property name="maximumSize">
                 <size>
                  <width>16777215</width>
@@ -928,173 +1646,24 @@ QLineEdit:focus {
             </layout>
            </item>
           </layout>
-         </widget>
-         <widget class="QWidget" name="layoutWidget_4">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>100</y>
-            <width>681</width>
-            <height>391</height>
-           </rect>
-          </property>
-          <layout class="QVBoxLayout" name="verticalLayout_15">
-           <item>
-            <widget class="QTextEdit" name="textEdit_Rapport_3"/>
-           </item>
-           <item>
-            <widget class="QPushButton" name="recherche_matiere_9">
-             <property name="styleSheet">
-              <string notr="true">QPushButton {
-    background-color: #333333; 
-    color: #FFFFFF; 
-    border: 2px solid #333333; /* Bordure */
-    border-radius: 10px; 
-    padding: 8px 16px;
-    font-size: 14px; 
-}
-
-/* Changement de style au survol */
-QPushButton:hover {
-    background-color: #555555;
-    border-color: #555555; 
-}
-
-/* Changement de style lorsqu'on clique */
-QPushButton:pressed {
-    background-color: #222222; /* Couleur de fond lors du clic */
-    border-color: #222222; /* Bordure lors du clic */
-    color: #CCCCCC; /* Couleur du texte lors du clic */
-}
-</string>
-             </property>
-             <property name="text">
-              <string>Envoyer le rapport mensuel</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </widget>
-        <widget class="QWidget" name="Conformite">
-         <widget class="QGroupBox" name="groupBox_6">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>150</y>
-            <width>701</width>
-            <height>531</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="title">
-           <string>Conformite</string>
-          </property>
-          <layout class="QGridLayout" name="gridLayout_6">
-           <item row="0" column="0">
-            <widget class="QTableWidget" name="table_conformite">
-             <property name="styleSheet">
-              <string notr="true">border: 1px solid #c6c6c6;
-border-radius: 5px;</string>
-             </property>
-             <attribute name="horizontalHeaderCascadingSectionResizes">
-              <bool>false</bool>
-             </attribute>
-             <attribute name="horizontalHeaderDefaultSectionSize">
-              <number>132</number>
-             </attribute>
-             <attribute name="horizontalHeaderStretchLastSection">
-              <bool>true</bool>
-             </attribute>
-             <column>
-              <property name="text">
-               <string>Nom enseignant </string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Duree du cours </string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Plan cours</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Syllabus</string>
-              </property>
-             </column>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <layout class="QVBoxLayout" name="verticalLayout_17">
-             <item>
-              <widget class="QLabel" name="label_7">
-               <property name="text">
-                <string>Laisser un commataire</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QTextEdit" name="textEdit_2"/>
-             </item>
-             <item>
-              <widget class="QPushButton" name="btn_commentaire_conformite">
-               <property name="styleSheet">
-                <string notr="true">QPushButton {
-    background-color: #333333; 
-    color: #FFFFFF; 
-    border: 2px solid #333333; /* Bordure */
-    border-radius: 10px; 
-    padding: 8px 16px;
-    font-size: 14px; 
-}
-
-/* Changement de style au survol */
-QPushButton:hover {
-    background-color: #555555;
-    border-color: #555555; 
-}
-
-/* Changement de style lorsqu'on clique */
-QPushButton:pressed {
-    background-color: #222222; /* Couleur de fond lors du clic */
-    border-color: #222222; /* Bordure lors du clic */
-    color: #CCCCCC; /* Couleur du texte lors du clic */
-}
-</string>
-               </property>
-               <property name="text">
-                <string>Valider</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QWidget" name="widget_5" native="true">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>10</y>
-            <width>711</width>
-            <height>121</height>
-           </rect>
-          </property>
-          <widget class="QPushButton" name="btn_conformite">
-           <property name="geometry">
-            <rect>
-             <x>10</x>
-             <y>80</y>
-             <width>671</width>
-             <height>39</height>
-            </rect>
-           </property>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="layoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>110</y>
+          <width>701</width>
+          <height>391</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <widget class="QTextEdit" name="contenu_Rapport"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_rapport">
            <property name="styleSheet">
             <string notr="true">QPushButton {
     background-color: #333333; 
@@ -1120,252 +1689,56 @@ QPushButton:pressed {
 </string>
            </property>
            <property name="text">
-            <string>Valider</string>
+            <string>Envoyer le rapport mensuel</string>
            </property>
           </widget>
-          <widget class="QWidget" name="layoutWidget">
-           <property name="geometry">
-            <rect>
-             <x>10</x>
-             <y>10</y>
-             <width>671</width>
-             <height>68</height>
-            </rect>
-           </property>
-           <layout class="QVBoxLayout" name="verticalLayout_10">
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="Rattrapagecours">
+       <widget class="QWidget" name="widget_6" native="true">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>30</y>
+          <width>711</width>
+          <height>261</height>
+         </rect>
+        </property>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>10</y>
+           <width>681</width>
+           <height>221</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_25">
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_16">
-              <item>
-               <widget class="QLabel" name="label_27">
-                <property name="text">
-                 <string>Rensigner la matiere</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="edit_matiere_conformite">
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="baseSize">
-                 <size>
-                  <width>0</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">/* Style de base pour le QLineEdit */
-QLineEdit {
-    background-color: transparent; /* Fond transparent */
-    border: none; /* Pas de bordure par défaut */
-    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */
-    padding: 2px; /* Espacement du texte à l'intérieur */
-    font-size: 16px; /* Taille de la police */
-    color: #333333; /* Couleur du texte */
-}
-
-/* Changement de style au survol */
-QLineEdit:hover {
-    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */
-}
-
-/* Changement de style lorsqu'il est actif/focus */
-QLineEdit:focus {
-    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */
-}
-
-</string>
-                </property>
-                <property name="readOnly">
-                 <bool>false</bool>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_24">
-              <item>
-               <widget class="QLabel" name="label_28">
-                <property name="text">
-                 <string>Renseigner le nom de l'enseignant</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="edit_nomEnseignant_conformite">
-                <property name="styleSheet">
-                 <string notr="true">/* Style de base pour le QLineEdit */
-QLineEdit {
-    background-color: transparent; /* Fond transparent */
-    border: none; /* Pas de bordure par défaut */
-    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */
-    padding: 2px; /* Espacement du texte à l'intérieur */
-    font-size: 16px; /* Taille de la police */
-    color: #333333; /* Couleur du texte */
-}
-
-/* Changement de style au survol */
-QLineEdit:hover {
-    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */
-}
-
-/* Changement de style lorsqu'il est actif/focus */
-QLineEdit:focus {
-    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */
-}
-</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-           </layout>
-          </widget>
-         </widget>
-        </widget>
-        <widget class="QWidget" name="Deroulementprogramme">
-         <widget class="QLabel" name="label_8">
-          <property name="geometry">
-           <rect>
-            <x>60</x>
-            <y>120</y>
-            <width>321</width>
-            <height>41</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <family>MS Gothic</family>
-            <pointsize>20</pointsize>
-            <italic>true</italic>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>DEROULMENT PROGRAMMES</string>
-          </property>
-         </widget>
-        </widget>
-        <widget class="QWidget" name="FichesEvaluation">
-         <widget class="QGroupBox" name="groupBox_4">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>150</y>
-            <width>701</width>
-            <height>281</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="title">
-           <string>FIches d'evaluation</string>
-          </property>
-          <layout class="QGridLayout" name="gridLayout_4">
-           <item row="1" column="0">
-            <widget class="QTableWidget" name="table_fiche">
-             <property name="styleSheet">
-              <string notr="true">border: 1px solid #c6c6c6;
-border-radius: 5px;</string>
-             </property>
-             <attribute name="horizontalHeaderCascadingSectionResizes">
-              <bool>false</bool>
-             </attribute>
-             <attribute name="horizontalHeaderDefaultSectionSize">
-              <number>132</number>
-             </attribute>
-             <attribute name="horizontalHeaderStretchLastSection">
-              <bool>true</bool>
-             </attribute>
-             <column>
+             <widget class="QLabel" name="label_32">
               <property name="text">
-               <string>Nom Etudiant</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Matiere</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Note</string>
-              </property>
-             </column>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QWidget" name="widget_3" native="true">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>10</y>
-            <width>711</width>
-            <height>121</height>
-           </rect>
-          </property>
-          <widget class="QPushButton" name="btn_evaluation">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>60</y>
-             <width>591</width>
-             <height>39</height>
-            </rect>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QPushButton {
-    background-color: #333333; 
-    color: #FFFFFF; 
-    border: 2px solid #333333; /* Bordure */
-    border-radius: 10px; 
-    padding: 8px 16px;
-    font-size: 14px; 
-}
-
-/* Changement de style au survol */
-QPushButton:hover {
-    background-color: #555555;
-    border-color: #555555; 
-}
-
-/* Changement de style lorsqu'on clique */
-QPushButton:pressed {
-    background-color: #222222; /* Couleur de fond lors du clic */
-    border-color: #222222; /* Bordure lors du clic */
-    color: #CCCCCC; /* Couleur du texte lors du clic */
-}
-</string>
-           </property>
-           <property name="text">
-            <string>Valider</string>
-           </property>
-          </widget>
-          <widget class="QWidget" name="layoutWidget">
-           <property name="geometry">
-            <rect>
-             <x>2</x>
-             <y>12</y>
-             <width>591</width>
-             <height>30</height>
-            </rect>
-           </property>
-           <layout class="QHBoxLayout" name="horizontalLayout">
-            <item>
-             <widget class="QLabel" name="label_20">
-              <property name="text">
-               <string>Renseigner la classe</string>
+               <string>Rensigner la nouvelle date du cours</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="edit_classe_avis_2">
+             <widget class="QLineEdit" name="edit_date_rattrapages">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="baseSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
               <property name="styleSheet">
                <string notr="true">/* Style de base pour le QLineEdit */
 QLineEdit {
@@ -1386,545 +1759,198 @@ QLineEdit:hover {
 QLineEdit:focus {
     border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */
 }
-</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-         </widget>
-        </widget>
-        <widget class="QWidget" name="AvisEtudiants">
-         <widget class="QGroupBox" name="groupBox_3">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>190</y>
-            <width>701</width>
-            <height>281</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(255, 255, 255);</string>
-          </property>
-          <property name="title">
-           <string>Avis</string>
-          </property>
-          <layout class="QGridLayout" name="gridLayout_3">
-           <item row="1" column="0">
-            <widget class="QTableWidget" name="table_avis">
-             <property name="styleSheet">
-              <string notr="true">border: 1px solid #c6c6c6;
-border-radius: 5px;</string>
-             </property>
-             <attribute name="horizontalHeaderCascadingSectionResizes">
-              <bool>false</bool>
-             </attribute>
-             <attribute name="horizontalHeaderDefaultSectionSize">
-              <number>132</number>
-             </attribute>
-             <attribute name="horizontalHeaderStretchLastSection">
-              <bool>true</bool>
-             </attribute>
-             <column>
-              <property name="text">
-               <string>Matiere</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Avis</string>
-              </property>
-             </column>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QWidget" name="widget_2" native="true">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>10</y>
-            <width>701</width>
-            <height>151</height>
-           </rect>
-          </property>
-          <layout class="QVBoxLayout" name="verticalLayout_12">
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout_8">
-             <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_10">
-               <item>
-                <widget class="QLabel" name="label_16">
-                 <property name="text">
-                  <string>Rensigner la matiere</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="edit_matiere_avis">
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="baseSize">
-                  <size>
-                   <width>0</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">/* Style de base pour le QLineEdit */
-QLineEdit {
-    background-color: transparent; /* Fond transparent */
-    border: none; /* Pas de bordure par défaut */
-    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */
-    padding: 2px; /* Espacement du texte à l'intérieur */
-    font-size: 16px; /* Taille de la police */
-    color: #333333; /* Couleur du texte */
-}
-
-/* Changement de style au survol */
-QLineEdit:hover {
-    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */
-}
-
-/* Changement de style lorsqu'il est actif/focus */
-QLineEdit:focus {
-    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */
-}
-</string>
-                 </property>
-                 <property name="readOnly">
-                  <bool>false</bool>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <widget class="QPushButton" name="btn_avis">
-             <property name="styleSheet">
-              <string notr="true">QPushButton {
-    background-color: #333333; 
-    color: #FFFFFF; 
-    border: 2px solid #333333; /* Bordure */
-    border-radius: 10px; 
-    padding: 8px 16px;
-    font-size: 14px; 
-}
-
-/* Changement de style au survol */
-QPushButton:hover {
-    background-color: #555555;
-    border-color: #555555; 
-}
-
-/* Changement de style lorsqu'on clique */
-QPushButton:pressed {
-    background-color: #222222; /* Couleur de fond lors du clic */
-    border-color: #222222; /* Bordure lors du clic */
-    color: #CCCCCC; /* Couleur du texte lors du clic */
-}
-</string>
-             </property>
-             <property name="text">
-              <string>Valider</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </widget>
-        <widget class="QWidget" name="RapportMensuel">
-         <widget class="QWidget" name="widget_8" native="true">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>10</y>
-            <width>701</width>
-            <height>78</height>
-           </rect>
-          </property>
-          <layout class="QVBoxLayout" name="verticalLayout_13">
-           <item>
-            <layout class="QVBoxLayout" name="verticalLayout_11">
-             <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_22">
-               <item>
-                <widget class="QLabel" name="label_11">
-                 <property name="text">
-                  <string>Rensigner la date de redaction du rapport</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QDateEdit" name="dateEdit"/>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_27">
-               <item>
-                <widget class="QLabel" name="label_13">
-                 <property name="text">
-                  <string>Rensigner le nom du  rapport</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLineEdit" name="edit_date_Rapport_2">
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="baseSize">
-                  <size>
-                   <width>0</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">/* Style de base pour le QLineEdit */
-QLineEdit {
-    background-color: transparent; /* Fond transparent */
-    border: none; /* Pas de bordure par défaut */
-    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */
-    padding: 2px; /* Espacement du texte à l'intérieur */
-    font-size: 16px; /* Taille de la police */
-    color: #333333; /* Couleur du texte */
-}
-
-/* Changement de style au survol */
-QLineEdit:hover {
-    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */
-}
-
-/* Changement de style lorsqu'il est actif/focus */
-QLineEdit:focus {
-    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */
-}
-	</string>
-                 </property>
-                 <property name="readOnly">
-                  <bool>false</bool>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </item>
-            </layout>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QWidget" name="layoutWidget">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>110</y>
-            <width>701</width>
-            <height>391</height>
-           </rect>
-          </property>
-          <layout class="QVBoxLayout" name="verticalLayout_6">
-           <item>
-            <widget class="QTextEdit" name="textEdit_Rapport"/>
-           </item>
-           <item>
-            <widget class="QPushButton" name="recherche_matiere_7">
-             <property name="styleSheet">
-              <string notr="true">QPushButton {
-    background-color: #333333; 
-    color: #FFFFFF; 
-    border: 2px solid #333333; /* Bordure */
-    border-radius: 10px; 
-    padding: 8px 16px;
-    font-size: 14px; 
-}
-
-/* Changement de style au survol */
-QPushButton:hover {
-    background-color: #555555;
-    border-color: #555555; 
-}
-
-/* Changement de style lorsqu'on clique */
-QPushButton:pressed {
-    background-color: #222222; /* Couleur de fond lors du clic */
-    border-color: #222222; /* Bordure lors du clic */
-    color: #CCCCCC; /* Couleur du texte lors du clic */
-}
-</string>
-             </property>
-             <property name="text">
-              <string>Envoyer le rapport mensuel</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </widget>
-        <widget class="QWidget" name="Rattrapagecours">
-         <widget class="QWidget" name="widget_6" native="true">
-          <property name="geometry">
-           <rect>
-            <x>20</x>
-            <y>30</y>
-            <width>711</width>
-            <height>261</height>
-           </rect>
-          </property>
-          <widget class="QWidget" name="layoutWidget">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>10</y>
-             <width>681</width>
-             <height>221</height>
-            </rect>
-           </property>
-           <layout class="QVBoxLayout" name="verticalLayout_7">
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_25">
-              <item>
-               <widget class="QLabel" name="label_32">
-                <property name="text">
-                 <string>Rensigner la nouvelle date du cours</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="edit_date_rattrapages">
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="baseSize">
-                 <size>
-                  <width>0</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">/* Style de base pour le QLineEdit */
-QLineEdit {
-    background-color: transparent; /* Fond transparent */
-    border: none; /* Pas de bordure par défaut */
-    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */
-    padding: 2px; /* Espacement du texte à l'intérieur */
-    font-size: 16px; /* Taille de la police */
-    color: #333333; /* Couleur du texte */
-}
-
-/* Changement de style au survol */
-QLineEdit:hover {
-    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */
-}
-
-/* Changement de style lorsqu'il est actif/focus */
-QLineEdit:focus {
-    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */
-}
 	
 </string>
-                </property>
-                <property name="readOnly">
-                 <bool>false</bool>
-                </property>
-               </widget>
-              </item>
-             </layout>
+              </property>
+              <property name="readOnly">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_20">
+            <item>
+             <widget class="QLabel" name="label_31">
+              <property name="text">
+               <string>Rensigner La nouvelle heure du cours</string>
+              </property>
+             </widget>
             </item>
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_20">
-              <item>
-               <widget class="QLabel" name="label_31">
-                <property name="text">
-                 <string>Rensigner La nouvelle heure du cours</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="edit_heure_rattrapages">
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="baseSize">
-                 <size>
-                  <width>0</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">/* Style de base pour le QLineEdit */
-QLineEdit {
-    background-color: transparent; /* Fond transparent */
-    border: none; /* Pas de bordure par défaut */
-    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */
-    padding: 2px; /* Espacement du texte à l'intérieur */
-    font-size: 16px; /* Taille de la police */
-    color: #333333; /* Couleur du texte */
-}
-
-/* Changement de style au survol */
-QLineEdit:hover {
-    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */
-}
-
-/* Changement de style lorsqu'il est actif/focus */
-QLineEdit:focus {
-    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */
-}
-	</string>
-                </property>
-                <property name="readOnly">
-                 <bool>false</bool>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_18">
-              <item>
-               <widget class="QLabel" name="label_29">
-                <property name="text">
-                 <string>Renseigner le nom du prof</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="edit_NomEnseignant_rattrapages">
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="baseSize">
-                 <size>
-                  <width>0</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">/* Style de base pour le QLineEdit */
-QLineEdit {
-    background-color: transparent; /* Fond transparent */
-    border: none; /* Pas de bordure par défaut */
-    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */
-    padding: 2px; /* Espacement du texte à l'intérieur */
-    font-size: 16px; /* Taille de la police */
-    color: #333333; /* Couleur du texte */
-}
-
-/* Changement de style au survol */
-QLineEdit:hover {
-    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */
-}
-
-/* Changement de style lorsqu'il est actif/focus */
-QLineEdit:focus {
-    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */
-}
-	</string>
-                </property>
-                <property name="readOnly">
-                 <bool>false</bool>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_19">
-              <item>
-               <widget class="QLabel" name="label_30">
-                <property name="text">
-                 <string>Reinsgeigner la matiere</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="edit_matiere_rattrapages">
-                <property name="styleSheet">
-                 <string notr="true">/* Style de base pour le QLineEdit */
-QLineEdit {
-    background-color: transparent; /* Fond transparent */
-    border: none; /* Pas de bordure par défaut */
-    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */
-    padding: 2px; /* Espacement du texte à l'intérieur */
-    font-size: 16px; /* Taille de la police */
-    color: #333333; /* Couleur du texte */
-}
-
-/* Changement de style au survol */
-QLineEdit:hover {
-    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */
-}
-
-/* Changement de style lorsqu'il est actif/focus */
-QLineEdit:focus {
-    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */
-}
-	</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_26">
-              <item>
-               <widget class="QLabel" name="label_33">
-                <property name="text">
-                 <string>Reinsgeigner la classe</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLineEdit" name="edit_classe_rattrapages">
-                <property name="styleSheet">
-                 <string notr="true">/* Style de base pour le QLineEdit */
-QLineEdit {
-    background-color: transparent; /* Fond transparent */
-    border: none; /* Pas de bordure par défaut */
-    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */
-    padding: 2px; /* Espacement du texte à l'intérieur */
-    font-size: 16px; /* Taille de la police */
-    color: #333333; /* Couleur du texte */
-}
-
-/* Changement de style au survol */
-QLineEdit:hover {
-    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */
-}
-
-/* Changement de style lorsqu'il est actif/focus */
-QLineEdit:focus {
-    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */
-}
-	</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <widget class="QPushButton" name="btn_rattrapage">
+             <widget class="QLineEdit" name="edit_heure_rattrapages">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="baseSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
               <property name="styleSheet">
-               <string notr="true">QPushButton {
+               <string notr="true">/* Style de base pour le QLineEdit */
+QLineEdit {
+    background-color: transparent; /* Fond transparent */
+    border: none; /* Pas de bordure par défaut */
+    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */
+    padding: 2px; /* Espacement du texte à l'intérieur */
+    font-size: 16px; /* Taille de la police */
+    color: #333333; /* Couleur du texte */
+}
+
+/* Changement de style au survol */
+QLineEdit:hover {
+    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */
+}
+
+/* Changement de style lorsqu'il est actif/focus */
+QLineEdit:focus {
+    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */
+}
+	</string>
+              </property>
+              <property name="readOnly">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_18">
+            <item>
+             <widget class="QLabel" name="label_29">
+              <property name="text">
+               <string>Renseigner le nom du prof</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="edit_NomEnseignant_rattrapages">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="baseSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">/* Style de base pour le QLineEdit */
+QLineEdit {
+    background-color: transparent; /* Fond transparent */
+    border: none; /* Pas de bordure par défaut */
+    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */
+    padding: 2px; /* Espacement du texte à l'intérieur */
+    font-size: 16px; /* Taille de la police */
+    color: #333333; /* Couleur du texte */
+}
+
+/* Changement de style au survol */
+QLineEdit:hover {
+    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */
+}
+
+/* Changement de style lorsqu'il est actif/focus */
+QLineEdit:focus {
+    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */
+}
+	</string>
+              </property>
+              <property name="readOnly">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_19">
+            <item>
+             <widget class="QLabel" name="label_30">
+              <property name="text">
+               <string>Reinsgeigner la matiere</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="edit_matiere_rattrapages">
+              <property name="styleSheet">
+               <string notr="true">/* Style de base pour le QLineEdit */
+QLineEdit {
+    background-color: transparent; /* Fond transparent */
+    border: none; /* Pas de bordure par défaut */
+    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */
+    padding: 2px; /* Espacement du texte à l'intérieur */
+    font-size: 16px; /* Taille de la police */
+    color: #333333; /* Couleur du texte */
+}
+
+/* Changement de style au survol */
+QLineEdit:hover {
+    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */
+}
+
+/* Changement de style lorsqu'il est actif/focus */
+QLineEdit:focus {
+    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */
+}
+	</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_26">
+            <item>
+             <widget class="QLabel" name="label_33">
+              <property name="text">
+               <string>Reinsgeigner la classe</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="edit_classe_rattrapages">
+              <property name="styleSheet">
+               <string notr="true">/* Style de base pour le QLineEdit */
+QLineEdit {
+    background-color: transparent; /* Fond transparent */
+    border: none; /* Pas de bordure par défaut */
+    border-bottom: 1px solid #CCCCCC; /* Bordure en bas seulement */
+    padding: 2px; /* Espacement du texte à l'intérieur */
+    font-size: 16px; /* Taille de la police */
+    color: #333333; /* Couleur du texte */
+}
+
+/* Changement de style au survol */
+QLineEdit:hover {
+    border-bottom-color: #AAAAAA; /* Couleur de la bordure en bas au survol */
+}
+
+/* Changement de style lorsqu'il est actif/focus */
+QLineEdit:focus {
+    border-bottom-color: #007ACC; /* Couleur de la bordure en bas lorsqu'il est actif */
+}
+	</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_rattrapage">
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
     background-color: #333333; 
     color: #FFFFFF; 
     border: 2px solid #333333; /* Bordure */
@@ -1946,59 +1972,19 @@ QPushButton:pressed {
     color: #CCCCCC; /* Couleur du texte lors du clic */
 }
 </string>
-              </property>
-              <property name="text">
-               <string>Valider</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-         </widget>
+            </property>
+            <property name="text">
+             <string>Valider</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-  </layout>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>36</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">image: url(:/logo pers.jpeg);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>2</width>
-     <height>2</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_21"/>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>2</width>
-     <height>2</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_23"/>
+      </widget>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>
@@ -2010,12 +1996,12 @@ QPushButton:pressed {
    <slot>setHidden(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>271</x>
-     <y>53</y>
+     <x>285</x>
+     <y>64</y>
     </hint>
     <hint type="destinationlabel">
-     <x>9</x>
-     <y>452</y>
+     <x>17</x>
+     <y>460</y>
     </hint>
    </hints>
   </connection>
@@ -2036,30 +2022,14 @@ QPushButton:pressed {
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_9</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>Form</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>14</x>
-     <y>457</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>24</x>
-     <y>502</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>pushButton_25</sender>
    <signal>toggled(bool)</signal>
    <receiver>Form</receiver>
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>136</x>
-     <y>470</y>
+     <x>223</x>
+     <y>665</y>
     </hint>
     <hint type="destinationlabel">
      <x>136</x>
@@ -2074,12 +2044,12 @@ QPushButton:pressed {
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>37</x>
-     <y>30</y>
+     <x>53</x>
+     <y>92</y>
     </hint>
     <hint type="destinationlabel">
-     <x>84</x>
-     <y>63</y>
+     <x>102</x>
+     <y>94</y>
     </hint>
    </hints>
   </connection>
@@ -2090,12 +2060,12 @@ QPushButton:pressed {
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>72</x>
-     <y>57</y>
+     <x>90</x>
+     <y>94</y>
     </hint>
     <hint type="destinationlabel">
-     <x>30</x>
-     <y>25</y>
+     <x>53</x>
+     <y>92</y>
     </hint>
    </hints>
   </connection>
@@ -2106,12 +2076,12 @@ QPushButton:pressed {
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>23</x>
-     <y>69</y>
+     <x>50</x>
+     <y>137</y>
     </hint>
     <hint type="destinationlabel">
-     <x>82</x>
-     <y>102</y>
+     <x>100</x>
+     <y>139</y>
     </hint>
    </hints>
   </connection>
@@ -2126,8 +2096,8 @@ QPushButton:pressed {
      <y>115</y>
     </hint>
     <hint type="destinationlabel">
-     <x>22</x>
-     <y>84</y>
+     <x>40</x>
+     <y>137</y>
     </hint>
    </hints>
   </connection>
@@ -2138,12 +2108,12 @@ QPushButton:pressed {
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>27</x>
-     <y>110</y>
+     <x>53</x>
+     <y>182</y>
     </hint>
     <hint type="destinationlabel">
-     <x>73</x>
-     <y>150</y>
+     <x>91</x>
+     <y>184</y>
     </hint>
    </hints>
   </connection>
@@ -2154,12 +2124,12 @@ QPushButton:pressed {
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>68</x>
-     <y>154</y>
+     <x>86</x>
+     <y>184</y>
     </hint>
     <hint type="destinationlabel">
-     <x>29</x>
-     <y>129</y>
+     <x>47</x>
+     <y>182</y>
     </hint>
    </hints>
   </connection>
@@ -2170,12 +2140,12 @@ QPushButton:pressed {
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>25</x>
-     <y>160</y>
+     <x>52</x>
+     <y>227</y>
     </hint>
     <hint type="destinationlabel">
-     <x>65</x>
-     <y>192</y>
+     <x>83</x>
+     <y>229</y>
     </hint>
    </hints>
   </connection>
@@ -2186,44 +2156,12 @@ QPushButton:pressed {
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>66</x>
-     <y>205</y>
+     <x>84</x>
+     <y>229</y>
     </hint>
     <hint type="destinationlabel">
-     <x>21</x>
-     <y>169</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>Deroulement_2</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>Deroulement_1</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>67</x>
-     <y>239</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>26</x>
-     <y>199</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>Deroulement_1</sender>
-   <signal>toggled(bool)</signal>
-   <receiver>Deroulement_2</receiver>
-   <slot>setChecked(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>29</x>
-     <y>210</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>68</x>
-     <y>253</y>
+     <x>39</x>
+     <y>227</y>
     </hint>
    </hints>
   </connection>
@@ -2234,12 +2172,12 @@ QPushButton:pressed {
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>63</x>
-     <y>285</y>
+     <x>81</x>
+     <y>319</y>
     </hint>
     <hint type="destinationlabel">
-     <x>31</x>
-     <y>246</y>
+     <x>53</x>
+     <y>317</y>
     </hint>
    </hints>
   </connection>
@@ -2250,12 +2188,12 @@ QPushButton:pressed {
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>27</x>
-     <y>258</y>
+     <x>45</x>
+     <y>317</y>
     </hint>
     <hint type="destinationlabel">
-     <x>67</x>
-     <y>293</y>
+     <x>85</x>
+     <y>319</y>
     </hint>
    </hints>
   </connection>
@@ -2266,12 +2204,12 @@ QPushButton:pressed {
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>67</x>
-     <y>325</y>
+     <x>85</x>
+     <y>364</y>
     </hint>
     <hint type="destinationlabel">
-     <x>23</x>
-     <y>288</y>
+     <x>50</x>
+     <y>362</y>
     </hint>
    </hints>
   </connection>
@@ -2282,8 +2220,8 @@ QPushButton:pressed {
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>30</x>
-     <y>300</y>
+     <x>53</x>
+     <y>362</y>
     </hint>
     <hint type="destinationlabel">
      <x>71</x>
@@ -2298,12 +2236,12 @@ QPushButton:pressed {
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>66</x>
-     <y>374</y>
+     <x>84</x>
+     <y>409</y>
     </hint>
     <hint type="destinationlabel">
-     <x>24</x>
-     <y>339</y>
+     <x>51</x>
+     <y>407</y>
     </hint>
    </hints>
   </connection>
@@ -2314,12 +2252,12 @@ QPushButton:pressed {
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>24</x>
-     <y>343</y>
+     <x>51</x>
+     <y>407</y>
     </hint>
     <hint type="destinationlabel">
-     <x>70</x>
-     <y>384</y>
+     <x>88</x>
+     <y>409</y>
     </hint>
    </hints>
   </connection>
@@ -2330,12 +2268,12 @@ QPushButton:pressed {
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>67</x>
-     <y>418</y>
+     <x>85</x>
+     <y>454</y>
     </hint>
     <hint type="destinationlabel">
-     <x>26</x>
-     <y>380</y>
+     <x>53</x>
+     <y>452</y>
     </hint>
    </hints>
   </connection>
@@ -2346,12 +2284,28 @@ QPushButton:pressed {
    <slot>setChecked(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>40</x>
-     <y>385</y>
+     <x>53</x>
+     <y>452</y>
     </hint>
     <hint type="destinationlabel">
-     <x>69</x>
-     <y>429</y>
+     <x>87</x>
+     <y>454</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_9</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Form</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>39</x>
+     <y>668</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>24</x>
+     <y>502</y>
     </hint>
    </hints>
   </connection>

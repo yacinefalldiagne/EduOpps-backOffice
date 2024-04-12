@@ -208,3 +208,5 @@ UNLOCK TABLES;
 
 -- Dump completed on 2024-04-12  1:14:28
 
+CREATE  TABLE evaluation(ID  INT PRIMARY KEY AUTO_INCREMENT, matiere VARCHAR(50), note INT, classe VARCHAR(20));
+

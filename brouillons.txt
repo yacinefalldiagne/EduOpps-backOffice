@@ -1,6 +1,7 @@
 A ajouter 
     self.btn_cahier = QPushButton(self.widget)
-ligne 419 du fichier accueil_RP je dois faire sa fonction qui permet de 
+    self.btn_cahier.clicked.connect(self.search_cahier)
+ajouuterafter chaque bouton
 faire la meme chose pour les autres bouttons
 
 faire la meme chose pour les autres 
