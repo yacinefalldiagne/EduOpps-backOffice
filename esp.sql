@@ -210,3 +210,26 @@ UNLOCK TABLES;
 
 CREATE  TABLE evaluation(ID  INT PRIMARY KEY AUTO_INCREMENT, matiere VARCHAR(50), note INT, classe VARCHAR(20));
 
+CREATE TABLE commentaire_cahier (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    contenu_commentaire TEXT,
+    id_classe INT,
+    FOREIGN KEY (id_classe) REFERENCES cahierdetexte(id)
+);
+
+CREATE TABLE rapport (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    date_rapport VARCHAR(20),
+    contenu_rapport TEXT,
+    nom_rapport VARCHAR(25)
+);
+
+CREATE TABLE rattrapages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nomProf VARCHAR(255),
+    date_cours DATE,
+    heure_cours TIME,
+    matiere VARCHAR(255)
+);
+
+
