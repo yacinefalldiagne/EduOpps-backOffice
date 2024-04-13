@@ -1,11 +1,27 @@
 import sys
-
 import requests
-from PyQt5.QtWidgets import QApplication, QWidget,QMainWindow
+from PyQt5.QtWidgets import  QWidget, QApplication, QMainWindow, QMessageBox
 from form import Ui_Form
-from Accueil import Ui_MainWindow
-# import mysql.connector
+from accueil_RP import Ui_Form_RP
+from accueil_CF import Ui_Form_CF
+from accueil_DE import Ui_Form_DE
+from MembreEquipePedagogique import Ui_Form_MEP
 
+from dotenv import load_dotenv
+import os
+
+role_pages = {
+    "RESPONSABLE_DEPARTEMENT": Ui_Form_RP,
+    "RESPONSABLE_PEDAGOGIQUE": Ui_Form_RP,
+    "CHEF_DEPARTEMENT": Ui_Form_CF,
+    "MEMBRE_EQUIPE_PEDAGOGIQUE": Ui_Form_MEP,
+    "MEMBRE_COMMISSION_PEDAGOGIQUE": Ui_Form_MEP,
+    "DIRECTEUR_ETUDES": Ui_Form_DE
+}
+
+load_dotenv()
+
+endpoint = os.getenv('endpoint')
 
 class LoginForm(QWidget):
     def __init__(self):
@@ -15,40 +31,28 @@ class LoginForm(QWidget):
         self.ui.pushButton.clicked.connect(self.login)
 
     def login(self):
-        username = self.ui.lineEdit.text()
+        username = self.ui.Username.text()
         password = self.ui.lineEdit_2.text()
-
-        # Connexion à la base de données MySQL
-        # connection = mysql.connector.connect(
-        #     host='localhost',
-        #     user='root',
-        #     password='bisko',
-        #     database='eduOps'
-        # )
-        # cursor = connection.cursor()
-        response = requests.post("http://localhost:3000/auth/adminLogin", json={"email": username, "password": password})
-        # Exemple de requête pour vérifier les informations d'identification
-        # cursor.execute("SELECT * FROM User WHERE email=%s AND password=%s", (username, password))
-        # user = cursor.fetchone()
-        print(response.status_code)
-        if response.status_code == 201:
-            token = response.json().get("access_token")
-            if token:
-                # Stocker le token localement pour une utilisation ultérieure
-                self.token = token
+        response = requests.post(f"http://localhost:3000/auth/login", json={"username": username, "password": password, "originType": "BackOfficeRole"})
+        print(response)
+        if response.status_code == 200:
+            token = response.json()
+            data=response.json()['data']
+            token = data['token']
+            role= data['role']
+            fullName=data['fullName']
+            if token and role in role_pages:
+                QMessageBox.information(self, "Success", f"Bienvenue {username}!")
                 self.accueil_window = QMainWindow()
-                self.ui = Ui_MainWindow()
+                role_page_class = role_pages[role]
+                self.ui = role_page_class()
                 self.ui.setupUi(self.accueil_window)
                 self.accueil_window.show()
-                self.close() 
-                # Faire quelque chose après la connexion réussie
-            else:
-                print( "Token not found in response!")
-            
+                self.close()
+            else: 
+                QMessageBox.warning(self, "Error", "Token not found in response!")
         else:
-            print("Invalid username or password")
-
-
+            QMessageBox.warning(self, "Error", "Nom d'utilisateur ou mot de passe invalide")
 
 class Widget(QWidget):
     def __init__(self, parent=None):
@@ -56,8 +60,7 @@ class Widget(QWidget):
         self.login_form = LoginForm()
         self.login_form.show()
 
-
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    widget = Widget()
-    sys.exit(app.exec())
+    widget = Widget()  
+    sys.exit(app.exec_())

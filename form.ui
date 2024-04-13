@@ -13,19 +13,48 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QFrame" name="horizontalFrame">
+  <property name="toolTip">
+   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;username&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QFrame" name="horizontalFrame_2">
    <property name="geometry">
     <rect>
      <x>40</x>
      <y>0</y>
      <width>701</width>
-     <height>41</height>
+     <height>51</height>
     </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(73, 144, 196);</string>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout"/>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>           BIENVENU DANS VOTRE PLATEFORME</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QFrame" name="horizontalFrame">
    <property name="geometry">
@@ -41,41 +70,26 @@
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_3"/>
   </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>140</x>
-     <y>100</y>
-     <width>481</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>14</pointsize>
-     <bold>false</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>           BIENVENU DANS VOTRE PLATEFORME</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="Username">
    <property name="geometry">
     <rect>
      <x>250</x>
-     <y>200</y>
-     <width>271</width>
-     <height>31</height>
+     <y>220</y>
+     <width>291</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>12</pointsize>
+     <pointsize>20</pointsize>
     </font>
    </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:24pt;&quot;&gt;username&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
    <property name="styleSheet">
-    <string notr="true">border-radius:15px;</string>
+    <string notr="true">border-radius:15px;
+background-color: rgb(210, 214, 214);</string>
    </property>
    <property name="text">
     <string/>
@@ -84,25 +98,26 @@
     <enum>QLineEdit::Normal</enum>
    </property>
    <property name="placeholderText">
-    <string>User Name</string>
+    <string>username</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_2">
    <property name="geometry">
     <rect>
      <x>250</x>
-     <y>290</y>
-     <width>271</width>
-     <height>31</height>
+     <y>330</y>
+     <width>291</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>12</pointsize>
+     <pointsize>20</pointsize>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-radius:15px;</string>
+    <string notr="true">border-radius:15px;
+background-color: rgb(210, 214, 214);</string>
    </property>
    <property name="text">
     <string/>
@@ -117,20 +132,23 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>370</y>
-     <width>131</width>
-     <height>41</height>
+     <x>310</x>
+     <y>400</y>
+     <width>161</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>12</pointsize>
+     <pointsize>20</pointsize>
     </font>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(73, 144, 196);
-color: rgb(28, 39, 255);
+color: rgb(255, 255, 255);
 border-radius:15px;
 
 
@@ -146,7 +164,7 @@ border-radius:15px;
     <string>Connexion</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="logESP">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -155,10 +173,85 @@ border-radius:15px;
      <height>41</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <property name="text">
     <string/>
    </property>
+   <property name="pixmap">
+    <pixmap>images/logoTypeEsp.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
   </widget>
+  <widget class="QLabel" name="logESP_2">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>220</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">image: url(:/img/images/loco pers (1).jpg);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>images/loco pers (1).jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="logESP_3">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>330</y>
+     <width>45</width>
+     <height>45</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>images/lock.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>60</y>
+     <width>101</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>images/user.png</pixmap>
+   </property>
+  </widget>
+  <zorder>horizontalFrame_2</zorder>
+  <zorder>horizontalFrame</zorder>
+  <zorder>Username</zorder>
+  <zorder>lineEdit_2</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>logESP_2</zorder>
+  <zorder>logESP</zorder>
+  <zorder>logESP_3</zorder>
+  <zorder>label_2</zorder>
  </widget>
  <resources/>
  <connections/>

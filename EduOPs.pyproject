@@ -3,6 +3,7 @@
         "widget.py",
         "form.ui",
         "images.qrc",
-        "Accueil.ui"
+        "Accueil.ui",
+        "images/lock2.png"
     ]
 }
